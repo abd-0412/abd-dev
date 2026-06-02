@@ -1,0 +1,3732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India</title>
+  <meta name="description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
+  <meta name="keywords" content="web developer tamil nadu, mern stack developer india, digital marketing agency tamil nadu, safr labs, abdul ajees m, freelance web developer, b.tech it student developer">
+  <meta name="author" content="Abdul Ajees M">
+  
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://abd-0412.github.io/abd-portfolio/">
+  
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abd-0412.github.io/abd-portfolio/">
+  <meta property="og:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
+  <meta property="og:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
+  <meta property="og:image" content="assets/images/azee pic.jpg">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://abd-0412.github.io/abd-portfolio/">
+  <meta name="twitter:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
+  <meta name="twitter:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
+  <meta name="twitter:image" content="assets/images/azee pic.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Ajees M",
+    "jobTitle": "Web Developer & Agency Founder",
+    "url": "https://abd-0412.github.io/abd-portfolio/",
+    "image": "https://abd-0412.github.io/abd-portfolio/assets/images/azee pic.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "India"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "K. Ramakrishnan College of Engineering",
+      "alternateName": "KRCE"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Safr Labs",
+      "url": "https://www.safrlabs.in"
+    },
+    "sameAs": [
+      "https://github.com/abd-0412",
+      "https://www.linkedin.com/in/abdul-ajees-m/",
+      "https://www.instagram.com/_abdazee_/",
+      "https://www.safrlabs.in"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts Connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       1. DESIGN SYSTEM SYSTEM & CSS RESET
+       ========================================== */
+    :root {
+      /* Palette tokens */
+      --bg: #FAFAF8;
+      --bg2: #F3F2EE;
+      --bg3: #ECEAE4;
+      --ink: #0D0D0B;
+      --ink2: #3A3935;
+      --ink3: #7A7970;
+      --ink4: #B0AFA8;
+      --indigo: #2D2B8F;
+      --blue: #4F8EF7;
+      --blue2: #EEF3FE;
+      --line: #E2E0D8;
+      --card: #FFFFFF;
+      --dark: #0D0D0B;
+      
+      /* Typography tokens */
+      --font-headings: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      
+      /* Layout & Shadows */
+      --shadow: 0 8px 32px rgba(0,0,0,.07);
+      --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Hide default cursor on devices that support hover clicks */
+    @media (hover: hover) and (pointer: fine) {
+      body, a, button, select, input, textarea, [role="button"], .interactive-hover {
+        cursor: none !important;
+      }
+    }
+
+    /* Typography tags */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-headings);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink2);
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    /* Utility spacing & layout classes */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 7rem 0;
+      position: relative;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--indigo);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title em {
+      font-family: var(--font-headings);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--indigo);
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--ink3);
+      max-width: 600px;
+      margin-bottom: 3.5rem;
+      font-weight: 400;
+    }
+
+    /* Common Buttons & Badges */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.85rem 2.25rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--indigo);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--ink);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(45, 43, 143, 0.2);
+    }
+
+    .btn-outline {
+      border-color: var(--ink3);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg3);
+      border-color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .badge-green {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: #E8F5E9;
+      color: #2E7D32;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* Fallback image style */
+    .image-fallback-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--indigo), var(--blue));
+      color: white;
+      font-family: var(--font-headings);
+      font-weight: 800;
+      font-size: 3.5rem;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    /* ==========================================
+       2. CUSTOM INTERACTIVE CURSOR
+       ========================================== */
+    #cur-dot, #cur-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      transform: translate3d(-50%, -50%, 0);
+      display: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      #cur-dot {
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: var(--indigo);
+        border-radius: 50%;
+        z-index: 9999;
+        transition: width 0.3s, height 0.3s, background-color 0.3s;
+      }
+      #cur-ring {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--indigo);
+        border-radius: 50%;
+        z-index: 9998;
+        transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s, opacity 0.3s;
+      }
+      #cur-dot.active {
+        width: 10px;
+        height: 10px;
+        background-color: var(--blue);
+      }
+      #cur-ring.active {
+        width: 56px;
+        height: 56px;
+        border-color: var(--blue);
+        background-color: transparent;
+        opacity: 0.25;
+      }
+    }
+
+    /* ==========================================
+       3. FLOATING NAVBAR & MOBILE OVERLAY
+       ========================================== */
+    .navbar {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(780px, 90vw);
+      height: 4.5rem;
+      background: rgba(250, 250, 248, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      z-index: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      background: rgba(250, 250, 248, 0.95);
+      border-color: rgba(226, 224, 216, 0.5);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 1.5rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-headings);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--indigo);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink2);
+      transition: var(--transition-fast);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 1.5px;
+      background: var(--indigo);
+      transform: translateX(-50%);
+      transition: var(--transition-fast);
+    }
+
+    .nav-link:hover, .nav-link.active-section {
+      color: var(--indigo);
+    }
+
+    .nav-link.active-section::after {
+      width: 60%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--ink);
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* Mobile Menu Side-Drawer Overlay */
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-drawer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(300px, 75vw);
+      height: 100%;
+      background: #121210;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+    }
+
+    .mobile-menu-overlay.open .mobile-menu-drawer {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+    }
+
+    .mobile-menu-close:hover {
+      color: var(--blue);
+      transform: rotate(90deg);
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .mobile-menu-link {
+      font-family: var(--font-headings);
+      font-size: 1.75rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      transition: var(--transition-fast);
+      padding: 0.25rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .mobile-menu-link:hover {
+      color: var(--blue);
+      padding-left: 0.5rem;
+    }
+
+    /* ==========================================
+       4. HERO SECTION
+       ========================================== */
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 9rem;
+      padding-bottom: 5rem;
+      position: relative;
+      background-image: url('assets/images/hero_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(250, 250, 248, 0.72);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .availability-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--blue2);
+      color: var(--indigo);
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(79, 142, 247, 0.15);
+    }
+
+    .pulsing-dot {
+      width: 8px;
+      height: 8px;
+      background: #10B981;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .pulsing-dot::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #10B981;
+      border-radius: 50%;
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3.2); opacity: 0; }
+    }
+
+    .hero-name {
+      font-family: var(--font-headings);
+      font-size: clamp(3rem, 6.5vw, 5.25rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 0.3em;
+    }
+
+    .hero-name-word {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      padding-bottom: 0.15em;
+      margin-bottom: -0.15em;
+    }
+
+    .hero-name-word span {
+      display: inline-block;
+      transform: translateY(110%);
+      animation: revealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .hero-name-word.word-2 span {
+      color: var(--indigo);
+      animation-delay: 0.12s;
+    }
+
+    @keyframes revealUp {
+      to { transform: translateY(0); }
+    }
+
+    .hero-role {
+      font-family: var(--font-headings);
+      font-size: clamp(1.4rem, 3.2vw, 2.25rem);
+      font-weight: 400;
+      color: var(--ink2);
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      height: 3rem;
+    }
+
+    .typed-role {
+      font-style: italic;
+      color: var(--indigo);
+      font-weight: 700;
+    }
+
+    .typed-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.1em;
+      background-color: var(--indigo);
+      margin-left: 4px;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--ink2);
+      margin-bottom: 2.5rem;
+      max-width: 580px;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-cta .btn {
+      min-width: 230px;
+    }
+
+    /* Stats container */
+    .hero-stats-container {
+      display: flex;
+      gap: 3rem;
+      border-top: 1px solid var(--line);
+      padding-top: 2rem;
+    }
+
+    .stat-item {
+      border-left: 2px solid var(--indigo);
+      padding-left: 1.25rem;
+    }
+
+    .stat-number-wrapper {
+      font-family: var(--font-headings);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--ink3);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Right column graphics */
+    .hero-right {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-right-mobile {
+      display: none;
+    }
+
+    .photo-frame {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      z-index: 2;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: var(--card);
+      padding: 0.55rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      z-index: 10;
+    }
+
+    .floating-card .label {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      color: var(--ink3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .floating-card .value {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .floating-card svg {
+      color: var(--indigo);
+      flex-shrink: 0;
+    }
+
+    .card-status {
+      top: 2rem;
+      right: -2.5rem;
+      animation: float1 4.5s ease-in-out infinite;
+    }
+
+    .card-agency {
+      bottom: 2rem;
+      left: -2.5rem;
+      animation: float2 5.5s ease-in-out infinite;
+    }
+
+    .card-location {
+      top: 50%;
+      left: -4.5rem;
+      transform: translateY(-50%);
+      animation: float3 5s ease-in-out infinite;
+    }
+
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(14px); }
+    }
+
+    @keyframes float3 {
+      0%, 100% { transform: translateY(-50%) translateX(0); }
+      50% { transform: translateY(-50%) translateX(-10px); }
+    }
+
+    /* ==========================================
+       5. MARQUEE INFINITE TICKER
+       ========================================== */
+    .marquee-section {
+      width: 100%;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--bg);
+      overflow: hidden;
+      padding: 1.75rem 0;
+    }
+
+    .marquee-wrapper {
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      width: 100%;
+    }
+
+    .marquee-content {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 2.5rem;
+      padding-left: 2.5rem;
+      animation: marquee-scroll 28s linear infinite;
+      min-width: 100%;
+    }
+
+    .marquee-wrapper:hover .marquee-content {
+      animation-play-state: paused;
+    }
+
+    .marquee-content span {
+      font-family: var(--font-headings);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink2);
+      letter-spacing: -0.01em;
+    }
+
+    .marquee-dot {
+      display: flex;
+      align-items: center;
+    }
+
+    @keyframes marquee-scroll {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* ==========================================
+       6. REVEAL ANIMATIONS (IntersectionObserver)
+       ========================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-48px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(48px);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right.revealed {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    /* ==========================================
+       7. ABOUT SECTION
+       ========================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-photo-wrapper {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      background: var(--bg2);
+    }
+
+    .about-photo-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-story {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .interests-container {
+      margin-top: 2rem;
+    }
+
+    .interests-title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink3);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .interests-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .interest-pill {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink2);
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      padding: 0.45rem 1.15rem;
+      border-radius: 100px;
+    }
+
+    /* ==========================================
+       8. SKILLS SECTION
+       ========================================== */
+    .skills-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.25rem;
+    }
+
+    .skills-category {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 2.5rem;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skills-category::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent-color, var(--indigo));
+      opacity: 0.8;
+    }
+
+    .skills-category.cat-frontend { --accent-color: var(--indigo); }
+    .skills-category.cat-backend { --accent-color: var(--blue); }
+    .skills-category.cat-tools { --accent-color: var(--ink2); }
+    .skills-category.cat-marketing { --accent-color: #10B981; }
+
+    .skills-category:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.05);
+      border-color: rgba(45, 43, 143, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .skills-category-label {
+      font-family: var(--font-headings);
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 1.75rem;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-chips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .skill-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 1rem;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      color: var(--ink2);
+      font-weight: 500;
+      opacity: 0;
+      transform: scale(0.85);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .skill-chip.animate {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .skill-chip svg {
+      color: var(--accent-color, var(--indigo));
+      transition: color 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .skill-chip:hover {
+      background: var(--accent-color, var(--indigo));
+      color: white !important;
+      border-color: var(--accent-color, var(--indigo));
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-chip:hover svg {
+      color: white !important;
+    }
+
+    /* ==========================================
+       9. EXPERIENCE TIMELINE
+       ========================================== */
+    #experience {
+      position: relative;
+      background-image: url('assets/images/experience_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #experience::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(250, 250, 248, 0.76);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #experience .container,
+    #experience .experience-timeline-wrapper {
+      position: relative;
+      z-index: 2;
+    }
+
+    .experience-timeline-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .experience-timeline {
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 12px;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1.5px;
+      background: var(--line);
+    }
+
+    .timeline-line-progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(to bottom, var(--indigo), var(--blue));
+      transition: height 0.1s ease-out;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 4rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3rem;
+      top: 0.25rem;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--indigo);
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: var(--transition-fast);
+    }
+
+    .timeline-dot::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--indigo);
+      transition: var(--transition-fast);
+    }
+
+    .timeline-item:hover .timeline-dot {
+      border-color: var(--blue);
+      transform: scale(1.15);
+      box-shadow: 0 0 12px rgba(79, 142, 247, 0.4);
+    }
+
+    .timeline-item:hover .timeline-dot::after {
+      background: var(--blue);
+    }
+
+    .timeline-content {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 2.25rem;
+      transition: var(--transition-smooth);
+    }
+
+    .timeline-content:hover {
+      border-color: rgba(45, 43, 143, 0.2);
+      box-shadow: 0 8px 32px rgba(45, 43, 143, 0.06);
+      transform: translateY(-4px);
+    }
+
+    .timeline-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--ink3);
+      font-weight: 500;
+    }
+
+    .timeline-company {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--indigo);
+    }
+
+    .timeline-role {
+      font-family: var(--font-headings);
+      font-size: 1.45rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .timeline-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg2);
+      color: var(--ink2);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    /* ==========================================
+       10. EDUCATION SECTION
+       ========================================== */
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .education-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 2.5rem;
+      position: relative;
+      transition: var(--transition-smooth);
+    }
+
+    .education-card:hover {
+      border-color: rgba(45, 43, 143, 0.2);
+      box-shadow: 0 8px 32px rgba(45, 43, 143, 0.06);
+      transform: translateY(-4px);
+    }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .education-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--blue2);
+      color: var(--indigo);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .education-period {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--ink3);
+      font-weight: 500;
+    }
+
+    .education-degree {
+      font-family: var(--font-headings);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .education-institution {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--indigo);
+      margin-bottom: 0.5rem;
+    }
+
+    .education-location {
+      font-size: 0.85rem;
+      color: var(--ink3);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .education-location svg {
+      color: var(--ink4);
+    }
+
+    .education-desc {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      margin-bottom: 1.5rem;
+    }
+
+    .education-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .education-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg2);
+      color: var(--ink2);
+      padding: 0.25rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    /* ==========================================
+       11. PROJECTS CAROUSEL (DRAG-SCROLL)
+       ========================================== */
+    #projects {
+      position: relative;
+      background-image: url('assets/images/projects_bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #projects::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(250, 250, 248, 0.78);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    #projects .container,
+    #projects .projects-carousel-wrapper,
+    #projects .carousel-footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    .projects-carousel-wrapper {
+      position: relative;
+      margin-top: 3rem;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      padding-bottom: 1rem;
+    }
+
+    .projects-carousel {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 1rem 2rem;
+      scrollbar-width: none;
+    }
+
+    @media (min-width: 1200px) {
+      .projects-carousel {
+        padding-left: calc((100vw - 1200px) / 2 + 2rem);
+        padding-right: calc((100vw - 1200px) / 2 + 2rem);
+      }
+    }
+
+    .projects-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .projects-carousel.active-dragging {
+      scroll-snap-type: none;
+      cursor: grabbing !important;
+    }
+
+    .project-card {
+      scroll-snap-align: start;
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .project-card.featured {
+      width: 560px;
+    }
+
+    .project-card.standard {
+      width: 420px;
+    }
+
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--indigo), var(--blue));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+      border-color: rgba(45, 43, 143, 0.15);
+    }
+
+    .project-card:hover::after {
+      opacity: 1;
+    }
+
+    /* Browser mockup header */
+    .browser-chrome {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--line);
+      padding: 0.65rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .browser-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .browser-dot.red { background: #FF5F56; }
+    .browser-dot.yellow { background: #FFBD2E; }
+    .browser-dot.green { background: #27C93F; }
+
+    .browser-address {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--ink3);
+      padding: 0.2rem 1.5rem 0.2rem 0.5rem;
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .project-visual {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .project-visual svg,
+    .project-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .project-card:hover .project-visual img,
+    .project-card:hover .project-visual svg {
+      transform: scale(1.05);
+    }
+
+    .project-info {
+      padding: 2.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .project-badge {
+      align-self: flex-start;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+      background: var(--blue2);
+      color: var(--indigo);
+      border: 1px solid rgba(79, 142, 247, 0.15);
+    }
+
+    .project-name {
+      font-family: var(--font-headings);
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: var(--ink);
+    }
+
+    .project-desc {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+      margin-top: auto;
+    }
+
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      background: var(--bg2);
+      color: var(--ink2);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .project-link-btn {
+      align-self: flex-start;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--indigo);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: var(--transition-fast);
+    }
+
+    .project-link-btn:hover {
+      gap: 0.75rem;
+      color: var(--blue);
+    }
+
+    /* Carousel footer hint */
+    .carousel-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .drag-hint {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--ink3);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .scroll-indicator-bar {
+      width: 120px;
+      height: 2px;
+      background: var(--line);
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .scroll-progress-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: var(--indigo);
+      border-radius: 2px;
+      transition: width 0.1s ease-out;
+    }
+
+    /* ==========================================
+       12. CERTIFICATIONS & ACHIEVEMENTS
+       ========================================== */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+
+    .cert-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      padding: 1.75rem;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: var(--transition-smooth);
+    }
+
+    .cert-card:hover {
+      border-color: rgba(45, 43, 143, 0.2);
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .cert-icon {
+      color: var(--indigo);
+      display: flex;
+      align-items: center;
+    }
+
+    .cert-name {
+      font-family: var(--font-headings);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .cert-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .cert-issuer {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--indigo);
+    }
+
+    .cert-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--ink3);
+    }
+
+    /* Achievements styling */
+    .ach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .ach-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--indigo);
+      padding: 2.25rem;
+      border-radius: 16px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .ach-card:hover {
+      border-color: rgba(45, 43, 143, 0.2);
+      border-top-color: var(--blue);
+      box-shadow: var(--shadow);
+      transform: translateY(-2px);
+    }
+
+    .ach-icon {
+      color: var(--indigo);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .ach-card:hover .ach-icon {
+      color: var(--blue);
+    }
+
+    .ach-title {
+      font-family: var(--font-headings);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .ach-desc {
+      font-size: 0.92rem;
+      color: var(--ink2);
+      line-height: 1.6;
+    }
+
+    .ach-number {
+      position: absolute;
+      bottom: -0.5rem;
+      right: 0.5rem;
+      font-family: var(--font-headings);
+      font-size: 6rem;
+      font-weight: 900;
+      color: var(--bg2);
+      line-height: 1;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.7;
+    }
+
+    /* ==========================================
+       13. CONTACT SECTION (FULL DARK)
+       ========================================== */
+    .contact-section {
+      background: var(--dark);
+      color: white;
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 5rem;
+      align-items: flex-start;
+    }
+
+    .contact-left h2 {
+      font-family: var(--font-headings);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      color: white;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .contact-subtext {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 3.5rem;
+      max-width: 500px;
+    }
+
+    .contact-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: var(--transition-fast);
+    }
+
+    .contact-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .contact-card-icon {
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .contact-card-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-card-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-card-value {
+      font-size: 0.85rem;
+      font-weight: 500;
+      word-break: break-all;
+    }
+
+    /* Right Column CTA box */
+    .contact-cta-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-cta-title {
+      font-family: var(--font-headings);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #E5A93B;
+    }
+
+    .contact-cta-text {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+    }
+
+    .contact-cta-box .btn {
+      width: 100%;
+      background: white;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .contact-cta-box .btn:hover {
+      background: var(--blue2);
+      color: var(--indigo);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+    }
+
+    .agency-ad-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .agency-link {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      align-self: center;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition-fast);
+    }
+
+    .agency-link:hover {
+      color: var(--blue);
+    }
+
+    /* ==========================================
+       14. FOOTER (FULL DARK CONTINUATION)
+       ========================================== */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2.5rem 0;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.78rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-link {
+      transition: var(--transition-fast);
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+
+    /* ==========================================
+       15. RESPONSIVENESS MEDIA QUERIES
+       ========================================== */
+    /* Carousel padding handled by default and min-width query */
+
+    @media (max-width: 900px) {
+      section {
+        padding: 5rem 0;
+      }
+      
+      .hero-section {
+        padding-top: 7.5rem;
+        padding-bottom: 4rem;
+        min-height: auto;
+      }
+
+      .availability-badge {
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+      
+      .hero-right {
+        display: none; /* Hide desktop column completely on mobile/tablet */
+      }
+
+      .hero-right-mobile {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        overflow: visible;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        width: 90vw;
+      }
+      
+      .nav-links {
+        display: none;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      .nav-btn {
+        display: none; /* Hide Hire Me on mobile navbar to keep layout clean */
+      }
+      
+      .ach-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .contact-links {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1.25rem; /* Tighter side padding on mobile (20px) */
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        width: 100%;
+      }
+      
+      .hero-cta .btn {
+        width: 100%;
+        min-width: 0; /* Let buttons take full width */
+      }
+      
+      .hero-stats-container {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .stat-item {
+        flex: 1;
+        min-width: 80px;
+        padding-left: 0.75rem;
+      }
+      
+      .stat-number-wrapper {
+        font-size: 1.75rem;
+      }
+
+      .hero-right-mobile {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: flex-start;
+        transform: scale(0.76);
+        transform-origin: center top;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        height: 310px;
+        width: 100%;
+        overflow: visible;
+      }
+
+      .about-photo-wrapper {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .skills-category {
+        padding: 1.75rem;
+      }
+
+      .experience-timeline {
+        padding-left: 2rem;
+      }
+      
+      .timeline-dot {
+        left: -2rem;
+        width: 20px;
+        height: 20px;
+      }
+      
+      .timeline-line {
+        left: 10px;
+      }
+      
+      .timeline-content {
+        padding: 1.5rem;
+      }
+
+      .education-card {
+        padding: 1.75rem;
+      }
+      
+      .project-card.featured,
+      .project-card.standard {
+        width: 85vw;
+      }
+
+      .project-info {
+        padding: 1.5rem;
+      }
+
+      .project-visual {
+        height: 180px;
+      }
+
+      .projects-carousel {
+        gap: 1.25rem;
+        padding: 1rem 1.25rem;
+      }
+      
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-cta-box {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .footer-right {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo interactive-hover">Abdul Ajees M.</a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link interactive-hover">About</a>
+          <a href="#skills" class="nav-link interactive-hover">Skills</a>
+          <a href="#experience" class="nav-link interactive-hover">Experience</a>
+          <a href="#education" class="nav-link interactive-hover">Education</a>
+          <a href="#projects" class="nav-link interactive-hover">Projects</a>
+          <a href="#awards" class="nav-link interactive-hover">Awards</a>
+          <a href="#contact" class="nav-link interactive-hover">Contact</a>
+        </div>
+        <div class="nav-right">
+          <button class="hamburger interactive-hover" id="hamburger" aria-label="Open Navigation Menu">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <a href="#contact" class="btn btn-primary nav-btn interactive-hover">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Side-Drawer Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-drawer">
+      <button class="mobile-menu-close interactive-hover" id="mobileMenuClose" aria-label="Close Navigation Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mobile-menu-links">
+        <a href="#about" class="mobile-menu-link interactive-hover">About</a>
+        <a href="#skills" class="mobile-menu-link interactive-hover">Skills</a>
+        <a href="#experience" class="mobile-menu-link interactive-hover">Experience</a>
+        <a href="#education" class="mobile-menu-link interactive-hover">Education</a>
+        <a href="#projects" class="mobile-menu-link interactive-hover">Projects</a>
+        <a href="#awards" class="mobile-menu-link interactive-hover">Awards</a>
+        <a href="#contact" class="mobile-menu-link interactive-hover">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    
+    <!-- ==========================================
+         SECTION 2: HERO SECTION
+         ========================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Column -->
+          <div class="hero-left">
+            <div class="availability-badge">
+              <span class="pulsing-dot"></span>
+              <span>Open to jobs & freelance</span>
+            </div>
+            
+            <!-- Mobile-only Hero Graphics -->
+            <div class="hero-right-mobile">
+              <div class="photo-frame">
+                <img src="assets/images/azee pic.jpg" alt="Abdul Ajees M" onerror="handleImageError(this, 'AA')">
+              </div>
+              
+              <!-- Floating cards -->
+              <div class="floating-card card-status">
+                <div class="pulsing-dot"></div>
+                <div>
+                  <span class="label">Status</span>
+                  <span class="value">Available for work</span>
+                </div>
+              </div>
+              
+              <div class="floating-card card-agency">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <div>
+                  <span class="label">Agency</span>
+                  <span class="value">Safr Labs</span>
+                </div>
+              </div>
+              
+              <div class="floating-card card-location">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div>
+                  <span class="label">Location</span>
+                  <span class="value">Tamil Nadu, India</span>
+                </div>
+              </div>
+            </div>
+            
+            <h1 class="hero-name">
+              <span class="hero-name-word word-1"><span>Abdul</span></span>
+              <span class="hero-name-word word-2"><span>Ajees M.</span></span>
+            </h1>
+            
+            <div class="hero-role">
+              <span>I'm a&nbsp;</span>
+              <span class="typed-role"></span>
+              <span class="typed-cursor"></span>
+            </div>
+            
+            <p class="hero-desc">
+              Final year B.Tech IT student from Tamil Nadu who builds real things — live agency, real clients, real results. I craft fast, beautiful web experiences and grow brands digitally.
+            </p>
+            
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary interactive-hover">
+                <span>View My Work</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="Azee Resume.pdf" download class="btn btn-outline interactive-hover">
+                <span>Download Resume</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+            
+            <div class="hero-stats-container">
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" data-target="2">0</span>+
+                </div>
+                <div class="stat-label">Years Building</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" data-target="5">0</span>+
+                </div>
+                <div class="stat-label">Projects Delivered</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" data-target="1">0</span>
+                </div>
+                <div class="stat-label">Live Agency</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hero Graphics Column -->
+          <div class="hero-right">
+            <div class="photo-frame">
+              <img src="assets/images/azee pic.jpg" alt="Abdul Ajees M" onerror="handleImageError(this, 'AA')">
+            </div>
+            
+            <!-- Floating cards (hidden on mobile) -->
+            <div class="floating-card card-status">
+              <div class="pulsing-dot"></div>
+              <div>
+                <span class="label">Status</span>
+                <span class="value">Available for work</span>
+              </div>
+            </div>
+            
+            <div class="floating-card card-agency">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              <div>
+                <span class="label">Agency</span>
+                <span class="value">Safr Labs</span>
+              </div>
+            </div>
+            
+            <div class="floating-card card-location">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <span class="label">Location</span>
+                <span class="value">Tamil Nadu, India</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: MARQUEE TICKER
+         ========================================== -->
+    <section class="marquee-section">
+      <div class="marquee-wrapper">
+        <div class="marquee-content">
+          <span>HTML5</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>CSS3</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>JavaScript</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>React</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Next.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Node.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>MongoDB</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Express.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Figma</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Git</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>GitHub</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>WordPress</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Canva</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Social Media</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>SEO</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Content Creation</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Java</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Cloud Computing</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>UI/UX Design</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          
+          <!-- Duplicate items for loop -->
+          <span>HTML5</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>CSS3</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>JavaScript</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>React</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Next.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Node.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>MongoDB</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Express.js</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Figma</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Git</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>GitHub</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>WordPress</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Canva</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Social Media</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>SEO</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Content Creation</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Java</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>Cloud Computing</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+          <span>UI/UX Design</span>
+          <span class="marquee-dot">
+            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: ABOUT ME
+         ========================================== -->
+    <section id="about">
+      <div class="container">
+        
+        <!-- Section Header above the columns to ensure correct mobile reading flow -->
+        <div class="reveal" style="margin-bottom: 3.5rem;">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title" style="margin-bottom: 0;">Developer. Founder. <em>Creator.</em></h2>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Photo Reveal -->
+          <div class="reveal-left">
+            <div class="about-photo-wrapper">
+              <img src="assets/images/azee selfie.jpg" alt="Abdul Ajees M Selfie" onerror="handleImageError(this, 'AM')">
+            </div>
+          </div>
+          
+          <!-- Right Column: Story Reveal -->
+          <div class="about-story reveal-right">
+            
+            <p>
+              I'm Abdul Ajees M, a final year B.Tech Information Technology student at K. Ramakrishnan College of Engineering, Tamil Nadu. While most students are still planning, I went ahead and built — a real agency, real clients, real impact.
+            </p>
+            
+            <p>
+              In May 2026, I founded Safr Labs — a premium digital marketing agency offering social media management, content creation, and high-performance website development. We've delivered production websites that generated measurable business results for clients across Tamil Nadu.
+            </p>
+            
+            <p>
+              My craft is at the intersection of engineering and design — I write clean code and obsess over details that most people never notice. I believe the best digital products are invisible — they just feel right.
+            </p>
+            
+            <p>
+              Outside tech, I explore photography, 3D modeling, and design — anything that trains the eye for beauty and precision.
+            </p>
+            
+            <!-- Interests Sub-Container -->
+            <div class="interests-container">
+              <h3 class="interests-title">Core Interests</h3>
+              <div class="interests-pills">
+                <span class="interest-pill">Photography</span>
+                <span class="interest-pill">3D Modeling</span>
+                <span class="interest-pill">UI/UX Design</span>
+                <span class="interest-pill">AI & Machine Learning</span>
+                <span class="interest-pill">Cloud Computing</span>
+                <span class="interest-pill">Open Source</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: TECHNICAL SKILLS
+         ========================================== -->
+    <section id="skills" class="reveal">
+      <div class="container">
+        <div>
+          <span class="section-label">Technical Skills</span>
+          <h2 class="section-title">My <em>Arsenal</em></h2>
+          <p class="section-subtitle">
+            Technologies and tools I use to bring ideas to life — from pixel to production.
+          </p>
+        </div>
+
+        <div class="skills-categories">
+          
+          <!-- Cat 1: Frontend -->
+          <div class="skills-category cat-frontend">
+            <h3 class="skills-category-label">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.65rem; color: var(--indigo);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              Frontend Development
+            </h3>
+            <div class="skill-chips-container">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 22l10-4 10 4z"/></svg>
+                <span>HTML5</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>CSS3</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <span>JavaScript</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 21c-4.97 0-9-1.79-9-4s4.03-4 9-4 9 1.79 9 4-4.03 4-9 4z"/><path d="M12 13c-4.97 0-9-1.79-9-4s4.03-4 9-4 9 1.79 9 4-4.03 4-9 4z"/></svg>
+                <span>React</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 16V8l8 8V8"/></svg>
+                <span>Next.js</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <span>Responsive Design</span>
+              </span>
+            </div>
+          </div>
+          
+          <!-- Cat 2: Backend -->
+          <div class="skills-category cat-backend">
+            <h3 class="skills-category-label">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.65rem; color: var(--blue);"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+              Backend & Database
+            </h3>
+            <div class="skill-chips-container">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Node.js</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span>Express.js</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <span>MongoDB</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <span>REST APIs</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                <span>Java</span>
+              </span>
+            </div>
+          </div>
+          
+          <!-- Cat 3: Tools & Design -->
+          <div class="skills-category cat-tools">
+            <h3 class="skills-category-label">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.65rem; color: var(--ink2);"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/><circle cx="7.5" cy="10.5" r="1.5" fill="currentColor"/><circle cx="11.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="16.5" cy="9.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="14.5" r="1.5" fill="currentColor"/></svg>
+              Tools & Design
+            </h3>
+            <div class="skill-chips-container">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                <span>Figma</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+                <span>Git</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="16 18 22 12 16 6 8 12 16 18"/><polygon points="8 18 2 12 8 6 16 12 8 18"/></svg>
+                <span>VS Code</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>WordPress</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/></svg>
+                <span>Canva</span>
+              </span>
+            </div>
+          </div>
+          
+          <!-- Cat 4: Digital Marketing -->
+          <div class="skills-category cat-marketing">
+            <h3 class="skills-category-label">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.65rem; color: #10B981;"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              Digital Marketing
+            </h3>
+            <div class="skill-chips-container">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <span>Social Media Management</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>
+                <span>Content Creation</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <span>SEO</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+                <span>Instagram Marketing</span>
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <span>Bilingual Copywriting</span>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: EXPERIENCE (Timeline)
+         ========================================== -->
+    <section id="experience" class="reveal">
+      <div class="container">
+        <div>
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Where I've <em>Grown</em></h2>
+          <div class="section-subtitle" style="margin-bottom: 2rem;"></div>
+        </div>
+
+        <div class="experience-timeline-wrapper">
+          <div class="experience-timeline">
+            
+            <!-- Dynamic vertical progress line -->
+            <div class="timeline-line">
+              <div class="timeline-line-progress"></div>
+            </div>
+            
+            <!-- Entry 1 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-date">May 2026 — Present</span>
+                  <a href="https://www.safrlabs.in" target="_blank" class="timeline-company interactive-hover">Safr Labs · safrlabs.in →</a>
+                </div>
+                <h3 class="timeline-role">Founder & Web Developer</h3>
+                <p class="timeline-desc">
+                  Founded and operate a full-service digital marketing agency delivering premium social media management, bilingual content creation, and high-performance web development. Built production websites for real clients generating measurable ROI. Manages end-to-end operations — strategy, design, development, and client communication.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Next.js</span>
+                  <span class="timeline-tag">Social Media</span>
+                  <span class="timeline-tag">SEO</span>
+                  <span class="timeline-tag">Client Management</span>
+                  <span class="timeline-tag">Agency Founder</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Entry 2 -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Oct 2025</span>
+                  <span class="timeline-company">Zoho Corporation, Surandai</span>
+                </div>
+                <h3 class="timeline-role">Project Trainee</h3>
+                <p class="timeline-desc">
+                  Participated in Zoho's Project Trainee program with focused learning in Java OOP fundamentals and AI concepts. Presented EcoRoute — an AI-powered eco-friendly route planner comparing paths by real-time CO₂ emissions — at the Rural Tech Uplift 2025 corporate event. Gained exposure to Zoho's product development culture and enterprise engineering standards.
+                </p>
+                <div class="timeline-tags">
+                  <span class="timeline-tag">Java</span>
+                  <span class="timeline-tag">AI Concepts</span>
+                  <span class="timeline-tag">Product Presentation</span>
+                  <span class="timeline-tag">EcoRoute</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 7: EDUCATION
+         ========================================== -->
+    <section id="education" class="reveal">
+      <div class="container">
+        <div>
+          <span class="section-label">Education</span>
+          <h2 class="section-title">Academic <em>Foundation</em></h2>
+          <p class="section-subtitle">Where curiosity became capability.</p>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- Card 1: B.Tech IT -->
+          <div class="education-card reveal-left delay-1">
+            <div class="education-header">
+              <div class="education-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
+              <div class="education-period">
+                <span>2023 — 2027</span>
+                <span class="badge-green">Current</span>
+              </div>
+            </div>
+            
+            <h3 class="education-degree">Bachelor of Technology — Information Technology</h3>
+            <div class="education-institution">K. Ramakrishnan College of Engineering</div>
+            <div class="education-location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Samayapuram, Trichy Dist, Tamil Nadu · Anna University</span>
+            </div>
+            <p class="education-desc">
+              Pursuing B.Tech IT with focus on full-stack development, data structures, algorithms, and emerging technologies. Founded Safr Labs during final year, delivering real client projects while completing academics.
+            </p>
+            <div class="education-tags">
+              <span class="education-tag">Full-Stack</span>
+              <span class="education-tag">Data Structures</span>
+              <span class="education-tag">Algorithms</span>
+              <span class="education-tag">Engineering</span>
+            </div>
+          </div>
+          
+          <!-- Card 2: HSC CS -->
+          <div class="education-card reveal-right delay-2">
+            <div class="education-header">
+              <div class="education-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/>
+                </svg>
+              </div>
+              <div class="education-period">2022 — 2023</div>
+            </div>
+            
+            <h3 class="education-degree">Higher Secondary Certificate (HSC) — Computer Science</h3>
+            <div class="education-institution">Government Higher Secondary School, Muthupet</div>
+            <div class="education-location">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Muthupet, Thiruvarur District, Tamil Nadu · State Board</span>
+            </div>
+            <p class="education-desc">
+              Completed 12th standard with Computer Science group, building strong foundations in programming logic, mathematics, and problem solving that shaped my technical career path.
+            </p>
+            <div class="education-tags">
+              <span class="education-tag">Computer Science</span>
+              <span class="education-tag">Mathematics</span>
+              <span class="education-tag">Logic</span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: PROJECTS (Horizontal drag-scroll)
+         ========================================== -->
+    <section id="projects" class="reveal">
+      <div class="container">
+        <div>
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">Things I've <em>Actually Built</em></h2>
+          <p class="section-subtitle">Real projects. Real clients. Real results. Drag to explore.</p>
+        </div>
+      </div>
+
+      <!-- Drag Carousel Outer wrapper -->
+      <div class="projects-carousel-wrapper">
+        <div class="projects-carousel" id="projectsCarousel">
+          
+          <!-- Project 1: Safr Labs (FEATURED) -->
+          <article class="project-card featured">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">safrlabs.in</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/safrlabs.png" alt="Safr Labs Cover" onerror="handleImageError(this, 'SL')">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Own Agency</span>
+              <h3 class="project-name">Safr Labs — Digital Marketing Studio</h3>
+              <p class="project-desc">
+                Built and run a full-service premium digital marketing agency. Features editorial Next.js architecture, Lighthouse 100 performance scores, bilingual content strategy, and ethical brand positioning. Serving real clients across Tamil Nadu and worldwide.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Next.js</span>
+                <span class="project-tag">SEO</span>
+                <span class="project-tag">Branding</span>
+                <span class="project-tag">Marketing</span>
+              </div>
+              <a href="https://www.safrlabs.in" target="_blank" class="project-link-btn interactive-hover">
+                <span>Visit Agency</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+          
+          <!-- Project 2: Nuqtah Studio -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">nuqtahstudio.vercel.app</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/nuqtahstudio.png" alt="Nuqtah Studio Cover" onerror="handleImageError(this, 'NS')">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Client — E-Commerce</span>
+              <h3 class="project-name">Nuqtah Studio</h3>
+              <p class="project-desc">
+                Bespoke e-commerce platform for an Islamic calligraphy and scent art studio. Features custom calligraphy preview module, scent pairing database, and sub-1s page loads. Boosted direct sales by 150%.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">E-Commerce</span>
+                <span class="project-tag">Performance</span>
+              </div>
+              <a href="https://nuqtahstudio.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
+                <span>View Project</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: AK Construction -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">akconstruction123.vercel.app</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/akconstruction.png" alt="AK Construction Cover" onerror="handleImageError(this, 'AK')">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Client — Corporate</span>
+              <h3 class="project-name">AK Construction</h3>
+              <p class="project-desc">
+                High-performance architectural portfolio for a Tamil Nadu builder. Custom sitemaps, large WebP image preloading, elite mobile-first editorial grids, and Lighthouse 100 speed scores. Generated 2.4x growth in inquiry rates.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">SEO</span>
+                <span class="project-tag">WebP</span>
+                <span class="project-tag">Performance</span>
+              </div>
+              <a href="https://akconstruction123.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
+                <span>View Project</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: Brew & Flour Café -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">brewandflour.vercel.app</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/brewandflour.png" alt="Brew & Flour Café Cover" onerror="handleImageError(this, 'BF')">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Portfolio Piece</span>
+              <h3 class="project-name">Brew & Flour Café</h3>
+              <p class="project-desc">
+                Full-featured café website for a Coimbatore specialty coffee brand. Includes menu, gallery, table reservations, online ordering, blog, and location integration. Clean editorial design with warm brand aesthetics.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">Multi-page</span>
+                <span class="project-tag">UI Design</span>
+              </div>
+              <a href="https://brewandflour.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
+                <span>View Project</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 5: EcoRoute -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">EcoRoute — AI Route Planner</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/ecoroute.png" alt="EcoRoute Cover" onerror="handleImageError(this, 'ER')">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">AI Project — Zoho Recognised</span>
+              <h3 class="project-name">EcoRoute</h3>
+              <p class="project-desc">
+                AI-powered route planning application that compares multiple travel paths based on real-time CO₂ emission data, helping users make environmentally conscious travel decisions. Presented at Zoho Corporation's Rural Tech Uplift 2025.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">Artificial Intelligence</span>
+                <span class="project-tag">Route Planning</span>
+                <span class="project-tag">CO₂ Data</span>
+                <span class="project-tag">Zoho</span>
+              </div>
+              <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="project-link-btn interactive-hover">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Drag Carousel Indicator Bar -->
+      <div class="carousel-footer">
+        <div class="drag-hint">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="9" y1="18" x2="15" y2="12"></line>
+            <line x1="9" y1="6" x2="15" y2="12"></line>
+          </svg>
+          <span>Drag to explore</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="15" y1="18" x2="9" y2="12"></line>
+            <line x1="15" y1="6" x2="9" y2="12"></line>
+          </svg>
+        </div>
+        <div class="scroll-indicator-bar">
+          <div class="scroll-progress-fill" id="scrollProgress"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: CERTIFICATIONS & ACHIEVEMENTS
+         ========================================== -->
+    <section id="awards" class="reveal">
+      <div class="container">
+        
+        <!-- Certifications Block -->
+        <div>
+          <span class="section-label">Certifications & Achievements</span>
+          <h2 class="section-title" style="margin-bottom: 3.5rem;">Proof of <em>Commitment</em></h2>
+        </div>
+
+        <div class="cert-grid">
+          
+          <!-- Cert 1 -->
+          <div class="cert-card reveal-left delay-1">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
+            <h3 class="cert-name">Azure Fundamentals</h3>
+            <div class="cert-meta">
+              <span class="cert-issuer">Microsoft</span>
+              <span class="cert-date">Sep 2025</span>
+            </div>
+          </div>
+          
+          <!-- Cert 2 -->
+          <div class="cert-card reveal-left delay-2">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            </div>
+            <h3 class="cert-name">GitHub Basics</h3>
+            <div class="cert-meta">
+              <span class="cert-issuer">Simplilearn</span>
+              <span class="cert-date">Sep 2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card reveal-left delay-3">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 class="cert-name">Introduction to HTML</h3>
+            <div class="cert-meta">
+              <span class="cert-issuer">Simplilearn</span>
+              <span class="cert-date">Aug 2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card reveal-left delay-4">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm0-16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2.5 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+            </div>
+            <h3 class="cert-name">Introduction to CSS</h3>
+            <div class="cert-meta">
+              <span class="cert-issuer">Simplilearn</span>
+              <span class="cert-date">Aug 2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="cert-card reveal-left delay-5">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="cert-name">JavaScript for Beginners</h3>
+            <div class="cert-meta">
+              <span class="cert-issuer">Simplilearn</span>
+              <span class="cert-date">Aug 2025</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Achievements Block -->
+        <div class="ach-grid">
+          
+          <!-- Ach 1 -->
+          <div class="ach-card reveal delay-1">
+            <div class="ach-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a7 7 0 0 0-7 7c0 2.98 1.86 5.51 4.47 6.47a2 2 0 0 0 2.53-1.92V2z"/>
+              </svg>
+            </div>
+            <h3 class="ach-title">Participant — Rural Tech Uplift 2025</h3>
+            <p class="ach-desc">
+              Presented EcoRoute at Zoho Corporation, Surandai, Oct 2025. Built an AI-powered eco-friendly route planner and demonstrated it at a corporate tech event.
+            </p>
+            <div class="ach-number">01</div>
+          </div>
+          
+          <!-- Ach 2 -->
+          <div class="ach-card reveal delay-2">
+            <div class="ach-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"/>
+                <path d="M15.47 14L19 22l-7-3-7 3 3.53-8"/>
+              </svg>
+            </div>
+            <h3 class="ach-title">Runner-up — Presentation Day, KRCE</h3>
+            <p class="ach-desc">
+              Secured runner-up position at K. Ramakrishnan College of Engineering Presentation Day, Aug 2025. Recognised for innovation, problem-solving and strong communication.
+            </p>
+            <div class="ach-number">02</div>
+          </div>
+
+          <!-- Ach 3 -->
+          <div class="ach-card reveal delay-3">
+            <div class="ach-icon">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                <line x1="9" y1="22" x2="9" y2="16"/>
+                <line x1="15" y1="22" x2="15" y2="16"/>
+                <line x1="9" y1="16" x2="15" y2="16"/>
+                <path d="M8 6h2v2H8V6zm0 4h2v2H8v-2zm8-4h2v2h-2V6zm0 4h2v2h-2v-2z"/>
+              </svg>
+            </div>
+            <h3 class="ach-title">Founded Safr Labs</h3>
+            <p class="ach-desc">
+              Launched a live digital marketing agency with real paying clients in May 2026 while completing final year of B.Tech IT — turning entrepreneurial vision into reality.
+            </p>
+            <div class="ach-number">03</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 10: CONTACT (FULL DARK)
+         ========================================== -->
+    <section id="contact" class="contact-section reveal">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Left: Info -->
+          <div class="contact-left">
+            <h2>Let's build something great together.</h2>
+            <p class="contact-subtext">
+              Whether you're a recruiter looking for a developer who ships real products, or a business that needs a website that actually converts — I'm here. Let's talk.
+            </p>
+            
+            <div class="contact-links">
+              
+              <!-- Email -->
+              <a href="mailto:abdajees01@gmail.com" class="contact-card interactive-hover">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-card-info">
+                  <span class="contact-card-label">Email Me</span>
+                  <span class="contact-card-value">abdajees01@gmail.com</span>
+                </div>
+              </a>
+              
+              <!-- GitHub -->
+              <a href="https://github.com/abd-0412" target="_blank" class="contact-card interactive-hover">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                </div>
+                <div class="contact-card-info">
+                  <span class="contact-card-label">GitHub</span>
+                  <span class="contact-card-value">github.com/abd-0412</span>
+                </div>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="contact-card interactive-hover">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="contact-card-info">
+                  <span class="contact-card-label">LinkedIn</span>
+                  <span class="contact-card-value">linkedin.com/in/abdul-ajees-m</span>
+                </div>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/_abdazee_/" target="_blank" class="contact-card interactive-hover">
+                <div class="contact-card-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="contact-card-info">
+                  <span class="contact-card-label">Instagram</span>
+                  <span class="contact-card-value">@_abdazee_</span>
+                </div>
+              </a>
+
+            </div>
+          </div>
+          
+          <!-- Contact Right: CTA Box -->
+          <div class="contact-right">
+            <div class="contact-cta-box">
+              <h3 class="contact-cta-title">Got a project or opportunity?</h3>
+              <p class="contact-cta-text">
+                I'm available for freelance web development, digital marketing projects, and full-time roles. Let's have a quick chat and figure out how I can help.
+              </p>
+              
+              <a href="mailto:abdajees01@gmail.com" class="btn interactive-hover">Send Me a Message</a>
+              
+              <div class="agency-ad-divider"></div>
+              
+              <a href="https://www.safrlabs.in" target="_blank" class="agency-link interactive-hover">
+                <span>Also check out my agency → safrlabs.in</span>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       SECTION 11: FOOTER (FULL DARK)
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>Designed & built by Abdul Ajees M © 2026</div>
+        <div class="footer-right">
+          <a href="https://github.com/abd-0412" target="_blank" class="footer-link interactive-hover">GitHub</a>
+          <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="footer-link interactive-hover">LinkedIn</a>
+          <a href="https://www.safrlabs.in" target="_blank" class="footer-link interactive-hover">Safr Labs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       16. PORTFOLIO INTERACTION SCRIPTS
+       ========================================== -->
+  <script>
+    // ==========================================
+    // A. CUSTOM CURSOR LERP AND GROW ANIMATIONS
+    // ==========================================
+    const dot = document.getElementById('cur-dot');
+    const ring = document.getElementById('cur-ring');
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+    let hasMoved = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      hasMoved = true;
+    });
+
+    // Lagging ring via lerp
+    function updateCursor() {
+      if (hasMoved) {
+        // Instant follow for dot
+        dotX = mouseX;
+        dotY = mouseY;
+        dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate3d(-50%, -50%, 0)`;
+
+        // Lag follow for ring (0.12 lerp factor)
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate3d(-50%, -50%, 0)`;
+      }
+      requestAnimationFrame(updateCursor);
+    }
+    requestAnimationFrame(updateCursor);
+
+    // Expand on hoverable elements
+    const hoverTargets = document.querySelectorAll('a, button, .proj-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover');
+    hoverTargets.forEach(target => {
+      target.addEventListener('mouseenter', () => {
+        dot.classList.add('active');
+        ring.classList.add('active');
+      });
+      target.addEventListener('mouseleave', () => {
+        dot.classList.remove('active');
+        ring.classList.remove('active');
+      });
+    });
+
+
+    // ==========================================
+    // B. IMAGE FALLBACK ON ERROR
+    // ==========================================
+    function handleImageError(imgEl, initials) {
+      const container = document.createElement('div');
+      container.className = 'image-fallback-container';
+      container.innerHTML = `<span>${initials}</span>`;
+      imgEl.parentNode.replaceChild(container, imgEl);
+    }
+
+
+    // ==========================================
+    // C. HERO NAME & STAT COUNTERS
+    // ==========================================
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let current = 0;
+        const duration = 1500; // ms
+        const stepTime = 30; // ms
+        const steps = duration / stepTime;
+        const increment = target / steps;
+        
+        let timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target;
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current);
+          }
+        }, stepTime);
+      });
+    }
+
+    // Trigger counters on load/scroll
+    const statsObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    const statsContainer = document.querySelector('.hero-stats-container');
+    if (statsContainer) {
+      statsObserver.observe(statsContainer);
+    }
+
+
+    // ==========================================
+    // D. TYPING ANIMATION (ROLES CYCLING)
+    // ==========================================
+    const roles = ["Web Developer", "Agency Founder", "UI/UX Designer", "Digital Marketer"];
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typedRoleSpan = document.querySelector('.typed-role');
+
+    function cycleRoles() {
+      const currentRoleText = roles[roleIdx];
+      
+      if (isDeleting) {
+        typedRoleSpan.textContent = currentRoleText.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typedRoleSpan.textContent = currentRoleText.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      let nextTimeout = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIdx === currentRoleText.length) {
+        // Finished writing, pause before delete
+        isDeleting = true;
+        nextTimeout = 2000;
+      } else if (isDeleting && charIdx === 0) {
+        // Finished deleting, shift to next word
+        isDeleting = false;
+        roleIdx = (roleIdx + 1) % roles.length;
+        nextTimeout = 400;
+      }
+
+      setTimeout(cycleRoles, nextTimeout);
+    }
+    // Start Typing cycle on load
+    setTimeout(cycleRoles, 1000);
+
+
+    // ==========================================
+    // E. NAVBAR SCROLL EFFECT & ACTIVE STATE
+    // ==========================================
+    const navbar = document.getElementById('navbar');
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      // 1. Scroll shadow activation
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      // 2. Active nav link highlighting
+      let currentSectionId = '';
+      sections.forEach(sec => {
+        const secTop = sec.offsetTop - 120;
+        const secHeight = sec.clientHeight;
+        if (window.scrollY >= secTop && window.scrollY < secTop + secHeight) {
+          currentSectionId = sec.getAttribute('id');
+        }
+      });
+
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.classList.remove('active-section');
+        if (link.getAttribute('href') === `#${currentSectionId}`) {
+          link.classList.add('active-section');
+        }
+      });
+    });
+
+
+    // ==========================================
+    // F. MOBILE NAVIGATION MENU OVERLAY
+    // ==========================================
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Close menu when clicking backdrop
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('open');
+      }
+    });
+
+
+    // ==========================================
+    // G. INTERSECTION OBSERVER FOR SCROLL REVEALS
+    // ==========================================
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+
+    // ==========================================
+    // H. STAGGERED SKILLS CHIPS REVEAL
+    // ==========================================
+    const skillsCategoryObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const chips = entry.target.querySelectorAll('.skill-chip');
+          chips.forEach((chip, index) => {
+            chip.style.transitionDelay = `${index * 50}ms`;
+            chip.classList.add('animate');
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.skills-category').forEach(cat => {
+      skillsCategoryObserver.observe(cat);
+    });
+
+
+    // ==========================================
+    // I. TIMELINECONNECTOR DRAWING ON SCROLL
+    // ==========================================
+    const experienceSection = document.getElementById('experience');
+    const timelineContainer = document.querySelector('.experience-timeline');
+    const progressLine = document.querySelector('.timeline-line-progress');
+
+    function updateTimelineProgress() {
+      if (!timelineContainer || !progressLine) return;
+      const rect = timelineContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Line draws from top of timeline to bottom as it scrolls
+      const startPoint = windowHeight * 0.75; 
+      const endPoint = windowHeight * 0.25;   
+      
+      const containerHeight = rect.height;
+      const progress = (startPoint - rect.top) / (containerHeight + (startPoint - endPoint));
+      const percent = Math.min(Math.max(progress * 100, 0), 100);
+      
+      progressLine.style.height = `${percent}%`;
+    }
+
+    const timelineObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          window.addEventListener('scroll', updateTimelineProgress);
+          updateTimelineProgress();
+        } else {
+          window.removeEventListener('scroll', updateTimelineProgress);
+        }
+      });
+    }, { rootMargin: '100px 0px 100px 0px' });
+
+    if (experienceSection) {
+      timelineObserver.observe(experienceSection);
+    }
+
+
+    // ==========================================
+    // J. PROJECTS CAROUSEL: DRAG SCROLL WITH MOMENTUM
+    // ==========================================
+    const carousel = document.getElementById('projectsCarousel');
+    const scrollProgress = document.getElementById('scrollProgress');
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let velocity = 0;
+    let lastX = 0;
+    let lastTime = 0;
+    let animationId = null;
+    let isDraggingMovement = false;
+
+    // Track scroll events for progress bar
+    carousel.addEventListener('scroll', updateCarouselProgressBar);
+
+    function updateCarouselProgressBar() {
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      if (maxScroll <= 0) return;
+      const scrollPercent = (carousel.scrollLeft / maxScroll) * 100;
+      scrollProgress.style.width = `${scrollPercent}%`;
+    }
+    // Initialize Progress
+    updateCarouselProgressBar();
+
+    // Mouse Listeners
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      isDraggingMovement = false;
+      carousel.classList.add('active-dragging');
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+      
+      // Stop inertia
+      cancelAnimationFrame(animationId);
+      velocity = 0;
+      lastX = e.pageX;
+      lastTime = performance.now();
+    });
+
+    carousel.addEventListener('mouseleave', () => {
+      if (isDown) {
+        isDown = false;
+        carousel.classList.remove('active-dragging');
+        applyInertia();
+      }
+    });
+
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+      carousel.classList.remove('active-dragging');
+      applyInertia();
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      
+      if (Math.abs(x - lastX) > 2) {
+        isDraggingMovement = true;
+      }
+      
+      carousel.scrollLeft = scrollLeft - walk;
+
+      // Calculate drag velocity
+      const now = performance.now();
+      const dt = now - lastTime;
+      if (dt > 0) {
+        const dx = e.pageX - lastX;
+        velocity = dx / dt;
+      }
+      lastX = e.pageX;
+      lastTime = now;
+    });
+
+    // Touch Listeners
+    carousel.addEventListener('touchstart', (e) => {
+      isDown = true;
+      isDraggingMovement = false;
+      startX = e.touches[0].pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+      
+      cancelAnimationFrame(animationId);
+      velocity = 0;
+      lastX = e.touches[0].pageX;
+      lastTime = performance.now();
+    });
+
+    carousel.addEventListener('touchend', () => {
+      isDown = false;
+      applyInertia();
+    });
+
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      
+      const x = e.touches[0].pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 1.2;
+      
+      if (Math.abs(x - lastX) > 2) {
+        isDraggingMovement = true;
+      }
+      
+      carousel.scrollLeft = scrollLeft - walk;
+
+      const now = performance.now();
+      const dt = now - lastTime;
+      if (dt > 0) {
+        const dx = e.touches[0].pageX - lastX;
+        velocity = dx / dt;
+      }
+      lastX = e.pageX;
+      lastTime = now;
+    });
+
+    // Prevent navigation click triggers when dragging
+    carousel.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (isDraggingMovement) {
+          e.preventDefault();
+        }
+      });
+    });
+
+    // Glide animation
+    function applyInertia() {
+      if (Math.abs(velocity) < 0.1) return;
+      
+      const friction = 0.94; // Slide damping
+      function step() {
+        if (isDown) return;
+        carousel.scrollLeft -= velocity * 16;
+        velocity *= friction;
+        
+        if (Math.abs(velocity) > 0.05) {
+          animationId = requestAnimationFrame(step);
+        }
+      }
+      animationId = requestAnimationFrame(step);
+    }
+  </script>
+</body>
+</html>
