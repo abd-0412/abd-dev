@@ -3662,45 +3662,7 @@
       lastTime = now;
     });
 
-    // Touch Listeners
-    carousel.addEventListener('touchstart', (e) => {
-      isDown = true;
-      isDraggingMovement = false;
-      startX = e.touches[0].pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-      
-      cancelAnimationFrame(animationId);
-      velocity = 0;
-      lastX = e.touches[0].pageX;
-      lastTime = performance.now();
-    });
 
-    carousel.addEventListener('touchend', () => {
-      isDown = false;
-      applyInertia();
-    });
-
-    carousel.addEventListener('touchmove', (e) => {
-      if (!isDown) return;
-      
-      const x = e.touches[0].pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.2;
-      
-      if (Math.abs(x - lastX) > 2) {
-        isDraggingMovement = true;
-      }
-      
-      carousel.scrollLeft = scrollLeft - walk;
-
-      const now = performance.now();
-      const dt = now - lastTime;
-      if (dt > 0) {
-        const dx = e.touches[0].pageX - lastX;
-        velocity = dx / dt;
-      }
-      lastX = e.pageX;
-      lastTime = now;
-    });
 
     // Prevent navigation click triggers when dragging
     carousel.querySelectorAll('a').forEach(link => {
