@@ -11,18 +11,18 @@
   <meta name="author" content="Abdul Ajees M">
   
   <!-- Canonical Link -->
-  <link rel="canonical" href="https://abd-0412.github.io/abd-portfolio/">
+  <link rel="canonical" href="https://abd-developer.vercel.app/">
   
   <!-- Open Graph / Facebook Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abd-0412.github.io/abd-portfolio/">
+  <meta property="og:url" content="https://abd-developer.vercel.app/">
   <meta property="og:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
   <meta property="og:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
   <meta property="og:image" content="assets/images/azee pic.jpg">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://abd-0412.github.io/abd-portfolio/">
+  <meta name="twitter:url" content="https://abd-developer.vercel.app/">
   <meta name="twitter:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
   <meta name="twitter:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
   <meta name="twitter:image" content="assets/images/azee pic.jpg">
@@ -34,8 +34,8 @@
     "@type": "Person",
     "name": "Abdul Ajees M",
     "jobTitle": "Web Developer & Agency Founder",
-    "url": "https://abd-0412.github.io/abd-portfolio/",
-    "image": "https://abd-0412.github.io/abd-portfolio/assets/images/azee pic.jpg",
+    "url": "https://abd-developer.vercel.app/",
+    "image": "https://abd-developer.vercel.app/assets/images/azee pic.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressRegion": "Tamil Nadu",
@@ -55,7 +55,8 @@
       "https://github.com/abd-0412",
       "https://www.linkedin.com/in/abdul-ajees-m/",
       "https://www.instagram.com/_abdazee_/",
-      "https://www.safrlabs.in"
+      "https://www.safrlabs.in",
+      "https://abd-developer.vercel.app/"
     ]
   }
   </script>
@@ -190,7 +191,7 @@
     .section-subtitle {
       font-size: 1.15rem;
       color: var(--ink3);
-      max-width: 600px;
+      max-width: 800px;
       margin-bottom: 3.5rem;
       font-weight: 400;
     }
@@ -2089,9 +2090,361 @@
         justify-content: center;
       }
     }
+
+    /* ==========================================
+       PREMIUM UPGRADES & BUG FIXES OVERRIDES
+       ========================================== */
+
+    /* Preloader (Upgrade 1) */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .preloader-content {
+      font-family: var(--font-headings);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--indigo);
+      animation: preloaderPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes preloaderPulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    body.loading {
+      overflow: hidden !important;
+      height: 100vh !important;
+    }
+
+    /* Scroll Progress Bar (Upgrade 2) */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #2D2B8F, #4F8EF7);
+      z-index: 499;
+      pointer-events: none;
+    }
+
+    /* Custom Cursor Refinements (Upgrade 12) */
+    @media (hover: hover) and (pointer: fine) {
+      * {
+        cursor: none !important;
+      }
+      #cur-ring.hovered {
+        background-color: rgba(45, 43, 143, 0.08) !important;
+        border-color: var(--indigo) !important;
+        width: 56px !important;
+        height: 56px !important;
+        opacity: 1 !important;
+      }
+    }
+
+    /* Typewriter Cursor (Bug 2) */
+    #typed-text::after {
+      content: '|';
+      animation: cursorBlink 0.8s infinite;
+      color: var(--indigo);
+      margin-left: 2px;
+      font-style: normal;
+      display: inline-block;
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Hero Name Rise Animation (Bug 6) */
+    .word-wrap {
+      display: inline-block;
+      overflow: hidden;
+      vertical-align: bottom;
+      padding-bottom: 0.25em;
+      margin-bottom: -0.25em;
+    }
+    .word {
+      display: inline-block;
+      transform: translateY(110%);
+      animation: wordRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .word.word-1 {
+      animation-delay: 0s;
+    }
+    .word.word-2 {
+      color: var(--indigo);
+      animation-delay: 0.15s;
+    }
+    @keyframes wordRise {
+      to { transform: translateY(0); }
+    }
+
+    /* Distinct Floating Animations & Shadows (Upgrade 5) */
+    .card-status {
+      animation: float1 4s ease-in-out infinite !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
+    }
+    .card-agency {
+      animation: float2 5s ease-in-out infinite !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
+    }
+    .card-location {
+      animation: float3 6s ease-in-out infinite 0.5s !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08) !important;
+    }
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translateY(-50%); }
+      50% { transform: translateY(calc(-50% - 8px)); }
+    }
+
+    /* Upgraded Section Reveal Quality (Upgrade 6) */
+    .reveal, .reveal-left, .reveal-right {
+      opacity: 0 !important;
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .reveal {
+      transform: translateY(28px) !important;
+    }
+    .reveal-left {
+      transform: translateX(-28px) !important;
+    }
+    .reveal-right {
+      transform: translateX(28px) !important;
+    }
+    .reveal.up, .reveal-left.up, .reveal-right.up {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    /* Child staggered transitions */
+    .reveal.up > *:nth-child(1) { transition-delay: 0.05s; }
+    .reveal.up > *:nth-child(2) { transition-delay: 0.1s; }
+    .reveal.up > *:nth-child(3) { transition-delay: 0.15s; }
+    .reveal.up > *:nth-child(4) { transition-delay: 0.2s; }
+    .reveal.up > *:nth-child(5) { transition-delay: 0.25s; }
+
+    /* Skill Chip Entrance Stagger & Hover Styles (Bug 4 & Upgrade 7) */
+    .skill-chip {
+      opacity: 0;
+      transform: scale(0.82) translateY(8px);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .skill-chip.animate {
+      animation: chipIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes chipIn {
+      from { opacity: 0; transform: scale(0.82) translateY(8px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .skill-chip:hover {
+      background: var(--indigo) !important;
+      color: #ffffff !important;
+      border-color: var(--indigo) !important;
+      transform: scale(1.06) translateY(-1px) !important;
+      box-shadow: 0 4px 16px rgba(45, 43, 143, 0.2) !important;
+    }
+    .skill-chip:hover svg {
+      color: #ffffff !important;
+    }
+
+    /* Timeline Drawing Animation (Bug 5) & Dynamic Scroll Indicator */
+    .timeline {
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1.5px;
+      background: var(--line);
+      height: 0;
+      transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
+    }
+    .timeline.animate-line::before {
+      height: 100%;
+    }
+    
+    .timeline-line-progress {
+      position: absolute;
+      left: 12px;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1.5px;
+      background: linear-gradient(to bottom, var(--indigo), var(--blue));
+      height: 0%;
+      transition: height 0.1s ease-out;
+      z-index: 2;
+    }
+
+
+
+    /* Active Link highlight (Upgrade 3) */
+    .nav-active {
+      color: var(--indigo) !important;
+      font-weight: 500 !important;
+    }
+    .nav-active::after {
+      width: 60% !important;
+    }
+    .mobile-menu-link.nav-active {
+      color: var(--blue) !important;
+    }
+
+    /* Upgraded Mobile Overlay Hamburger (Upgrade 8) */
+    .navbar {
+      z-index: 500;
+    }
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      z-index: 601;
+      padding: 0;
+    }
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+    }
+    .hamburger .bar {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    }
+    .hamburger .bar-1 { top: 0; }
+    .hamburger .bar-2 { top: 9px; }
+    .hamburger .bar-3 { top: 18px; }
+
+    .hamburger.open .bar {
+      background: white;
+    }
+    .hamburger.open .bar-1 {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.open .bar-2 {
+      opacity: 0;
+    }
+    .hamburger.open .bar-3 {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .mobile-menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: #0D0D0B;
+      z-index: 600;
+      transform: translateY(-100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .mobile-menu-overlay.open {
+      transform: translateY(0);
+    }
+    .mobile-menu-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition-fast);
+      z-index: 602;
+    }
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.25rem;
+    }
+    .mobile-menu-link {
+      font-family: var(--font-headings);
+      font-size: 2rem;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition-fast);
+      font-weight: 500;
+    }
+    .mobile-menu-link:hover {
+      color: var(--blue);
+    }
+
+    /* Project card link hover enhancements (Upgrade 4) */
+    .project-link-btn {
+      align-self: flex-start;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--indigo) !important;
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+      transition: var(--transition-fast);
+      position: relative;
+    }
+    .project-link-btn:hover {
+      text-decoration: underline !important;
+    }
+    .project-link-btn svg {
+      transition: transform 0.25s ease;
+      stroke: var(--indigo);
+      stroke-width: 2.5;
+    }
+    .project-link-btn:hover svg {
+      transform: translate(2px, -2px);
+    }
   </style>
 </head>
 <body>
+
+  <!-- Full Screen Page Preloader (Upgrade 1) -->
+  <div id="preloader">
+    <div class="preloader-content">AA.</div>
+  </div>
+
+  <!-- Scroll Progress Bar (Upgrade 2) -->
+  <div id="scroll-progress"></div>
 
   <!-- Custom Cursor Elements -->
   <div id="cur-dot"></div>
@@ -2113,11 +2466,9 @@
         </div>
         <div class="nav-right">
           <button class="hamburger interactive-hover" id="hamburger" aria-label="Open Navigation Menu">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-              <line x1="4" y1="6" x2="20" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <line x1="4" y1="18" x2="20" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
           </button>
           <a href="#contact" class="btn btn-primary nav-btn interactive-hover">Hire Me</a>
         </div>
@@ -2125,24 +2476,22 @@
     </nav>
   </header>
 
-  <!-- Mobile Menu Side-Drawer Overlay -->
+  <!-- Mobile Menu Fullscreen Overlay (Upgrade 8) -->
   <div class="mobile-menu-overlay" id="mobileMenu">
-    <div class="mobile-menu-drawer">
-      <button class="mobile-menu-close interactive-hover" id="mobileMenuClose" aria-label="Close Navigation Menu">
-        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-      <div class="mobile-menu-links">
-        <a href="#about" class="mobile-menu-link interactive-hover">About</a>
-        <a href="#skills" class="mobile-menu-link interactive-hover">Skills</a>
-        <a href="#experience" class="mobile-menu-link interactive-hover">Experience</a>
-        <a href="#education" class="mobile-menu-link interactive-hover">Education</a>
-        <a href="#projects" class="mobile-menu-link interactive-hover">Projects</a>
-        <a href="#awards" class="mobile-menu-link interactive-hover">Awards</a>
-        <a href="#contact" class="mobile-menu-link interactive-hover">Contact</a>
-      </div>
+    <button class="mobile-menu-close interactive-hover" id="mobileMenuClose" aria-label="Close Navigation Menu">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-menu-links">
+      <a href="#about" class="mobile-menu-link interactive-hover">About</a>
+      <a href="#skills" class="mobile-menu-link interactive-hover">Skills</a>
+      <a href="#experience" class="mobile-menu-link interactive-hover">Experience</a>
+      <a href="#education" class="mobile-menu-link interactive-hover">Education</a>
+      <a href="#projects" class="mobile-menu-link interactive-hover">Projects</a>
+      <a href="#awards" class="mobile-menu-link interactive-hover">Awards</a>
+      <a href="#contact" class="mobile-menu-link interactive-hover">Contact</a>
     </div>
   </div>
 
@@ -2201,14 +2550,13 @@
             </div>
             
             <h1 class="hero-name">
-              <span class="hero-name-word word-1"><span>Abdul</span></span>
-              <span class="hero-name-word word-2"><span>Ajees M.</span></span>
+              <span class="word-wrap"><span class="word word-1">Abdul</span></span>
+              <span class="word-wrap"><span class="word word-2">Ajees M.</span></span>
             </h1>
             
             <div class="hero-role">
               <span>I'm a&nbsp;</span>
-              <span class="typed-role"></span>
-              <span class="typed-cursor"></span>
+              <span id="typed-text"></span>
             </div>
             
             <p class="hero-desc">
@@ -2236,19 +2584,19 @@
             <div class="hero-stats-container">
               <div class="stat-item">
                 <div class="stat-number-wrapper">
-                  <span class="stat-number" data-target="2">0</span>+
+                  <span class="stat-number" data-count="2">0</span>
                 </div>
                 <div class="stat-label">Years Building</div>
               </div>
               <div class="stat-item">
                 <div class="stat-number-wrapper">
-                  <span class="stat-number" data-target="5">0</span>+
+                  <span class="stat-number" data-count="5">0</span>
                 </div>
                 <div class="stat-label">Projects Delivered</div>
               </div>
               <div class="stat-item">
                 <div class="stat-number-wrapper">
-                  <span class="stat-number" data-target="1">0</span>
+                  <span class="stat-number" data-count="1">0</span>
                 </div>
                 <div class="stat-label">Live Agency</div>
               </div>
@@ -2371,10 +2719,7 @@
           <span class="marquee-dot">
             <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
           </span>
-          <span>Cloud Computing</span>
-          <span class="marquee-dot">
-            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
-          </span>
+
           <span>UI/UX Design</span>
           <span class="marquee-dot">
             <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
@@ -2449,10 +2794,7 @@
           <span class="marquee-dot">
             <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
           </span>
-          <span>Cloud Computing</span>
-          <span class="marquee-dot">
-            <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
-          </span>
+
           <span>UI/UX Design</span>
           <span class="marquee-dot">
             <svg viewBox="0 0 8 8" width="6" height="6"><circle cx="4" cy="4" r="3" fill="var(--indigo)"/></svg>
@@ -2498,7 +2840,7 @@
             </p>
             
             <p>
-              Outside tech, I explore photography, 3D modeling, and design — anything that trains the eye for beauty and precision.
+              Outside tech, I explore photography and design — anything that trains the eye for beauty and precision.
             </p>
             
             <!-- Interests Sub-Container -->
@@ -2506,10 +2848,8 @@
               <h3 class="interests-title">Core Interests</h3>
               <div class="interests-pills">
                 <span class="interest-pill">Photography</span>
-                <span class="interest-pill">3D Modeling</span>
                 <span class="interest-pill">UI/UX Design</span>
                 <span class="interest-pill">AI & Machine Learning</span>
-                <span class="interest-pill">Cloud Computing</span>
                 <span class="interest-pill">Open Source</span>
               </div>
             </div>
@@ -2678,12 +3018,8 @@
         </div>
 
         <div class="experience-timeline-wrapper">
-          <div class="experience-timeline">
-            
-            <!-- Dynamic vertical progress line -->
-            <div class="timeline-line">
-              <div class="timeline-line-progress"></div>
-            </div>
+          <div class="experience-timeline timeline">
+            <div class="timeline-line-progress"></div>
             
             <!-- Entry 1 -->
             <div class="timeline-item">
@@ -2844,7 +3180,7 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/safrlabs.png" alt="Safr Labs Cover" onerror="handleImageError(this, 'SL')">
+              <img src="assets/images/safrlabs.png" alt="Safr Labs Cover" onerror="handleImageError(this, 'SL', ['#2D2B8F', '#4F8EF7'])">
             </div>
             
             <div class="project-info">
@@ -2861,7 +3197,7 @@
               </div>
               <a href="https://www.safrlabs.in" target="_blank" class="project-link-btn interactive-hover">
                 <span>Visit Agency</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -2881,7 +3217,7 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/nuqtahstudio.png" alt="Nuqtah Studio Cover" onerror="handleImageError(this, 'NS')">
+              <img src="assets/images/nuqtahstudio.png" alt="Nuqtah Studio Cover" onerror="handleImageError(this, 'NS', ['#0D0D0B', '#3A3935'])">
             </div>
             
             <div class="project-info">
@@ -2896,8 +3232,8 @@
                 <span class="project-tag">Performance</span>
               </div>
               <a href="https://nuqtahstudio.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
-                <span>View Project</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <span>View Live</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -2917,7 +3253,7 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/akconstruction.png" alt="AK Construction Cover" onerror="handleImageError(this, 'AK')">
+              <img src="assets/images/akconstruction.png" alt="AK Construction Cover" onerror="handleImageError(this, 'AK', ['#E5A93B', '#B0AFA8'])">
             </div>
             
             <div class="project-info">
@@ -2933,8 +3269,8 @@
                 <span class="project-tag">Performance</span>
               </div>
               <a href="https://akconstruction123.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
-                <span>View Project</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <span>View Live</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -2954,7 +3290,7 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/brewandflour.png" alt="Brew & Flour Café Cover" onerror="handleImageError(this, 'BF')">
+              <img src="assets/images/brewandflour.png" alt="Brew & Flour Café Cover" onerror="handleImageError(this, 'BF', ['#7A7970', '#ECEAE4'])">
             </div>
             
             <div class="project-info">
@@ -2969,8 +3305,8 @@
                 <span class="project-tag">UI Design</span>
               </div>
               <a href="https://brewandflour.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
-                <span>View Project</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <span>View Live</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -2990,7 +3326,7 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/ecoroute.png" alt="EcoRoute Cover" onerror="handleImageError(this, 'ER')">
+              <img src="assets/images/ecoroute.png" alt="EcoRoute Cover" onerror="handleImageError(this, 'ER', ['#10B981', '#4F8EF7'])">
             </div>
             
             <div class="project-info">
@@ -3006,8 +3342,8 @@
                 <span class="project-tag">Zoho</span>
               </div>
               <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="project-link-btn interactive-hover">
-                <span>View Details</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <span>View Live</span>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
                   <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
@@ -3295,6 +3631,9 @@
           <a href="https://www.safrlabs.in" target="_blank" class="footer-link interactive-hover">Safr Labs</a>
         </div>
       </div>
+      <div class="footer-subline" style="text-align: center; margin-top: 1.5rem; font-size: 0.7rem; color: rgba(255,255,255,0.15); font-family: var(--font-mono);">
+        Made with precision in Tamil Nadu
+      </div>
     </div>
   </footer>
 
@@ -3303,7 +3642,41 @@
        ========================================== -->
   <script>
     // ==========================================
-    // A. CUSTOM CURSOR LERP AND GROW ANIMATIONS
+    // 1. PAGE PRELOADER LOGIC
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("loading");
+    });
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.style.opacity = "0";
+          setTimeout(() => {
+            preloader.style.display = "none";
+            document.body.classList.remove("loading");
+          }, 500);
+        }
+      }, 600);
+    });
+
+    // ==========================================
+    // 2. SCROLL PROGRESS BAR LOGIC
+    // ==========================================
+    window.addEventListener("scroll", () => {
+      const scrollProgress = document.getElementById("scroll-progress");
+      if (scrollProgress) {
+        const scrollY = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight;
+        const winHeight = window.innerHeight;
+        const totalScrollable = docHeight - winHeight;
+        const widthPercent = totalScrollable > 0 ? (scrollY / totalScrollable) * 100 : 0;
+        scrollProgress.style.width = widthPercent + "%";
+      }
+    });
+
+    // ==========================================
+    // 3. CUSTOM CURSOR & REFINEMENTS
     // ==========================================
     const dot = document.getElementById('cur-dot');
     const ring = document.getElementById('cur-ring');
@@ -3319,55 +3692,67 @@
       hasMoved = true;
     });
 
-    // Lagging ring via lerp
     function updateCursor() {
       if (hasMoved) {
-        // Instant follow for dot
         dotX = mouseX;
         dotY = mouseY;
         dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate3d(-50%, -50%, 0)`;
 
-        // Lag follow for ring (0.12 lerp factor)
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
+        ringX += (mouseX - ringX) * 0.28;
+        ringY += (mouseY - ringY) * 0.28;
         ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate3d(-50%, -50%, 0)`;
       }
       requestAnimationFrame(updateCursor);
     }
     requestAnimationFrame(updateCursor);
 
+    // Hide/show cursor on window exit/enter
+    document.addEventListener('mouseleave', () => {
+      dot.style.display = 'none';
+      ring.style.display = 'none';
+    });
+    document.addEventListener('mouseenter', () => {
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        dot.style.display = 'block';
+        ring.style.display = 'block';
+      }
+    });
+
     // Expand on hoverable elements
-    const hoverTargets = document.querySelectorAll('a, button, .proj-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover');
+    const hoverTargets = document.querySelectorAll('a, button, .project-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover');
     hoverTargets.forEach(target => {
       target.addEventListener('mouseenter', () => {
         dot.classList.add('active');
-        ring.classList.add('active');
+        ring.classList.add('hovered');
       });
       target.addEventListener('mouseleave', () => {
         dot.classList.remove('active');
-        ring.classList.remove('active');
+        ring.classList.remove('hovered');
       });
     });
 
-
     // ==========================================
-    // B. IMAGE FALLBACK ON ERROR
+    // 4. IMAGE FALLBACK ON ERROR WITH GRADIENTS
     // ==========================================
-    function handleImageError(imgEl, initials) {
+    function handleImageError(imgEl, initials, colors) {
       const container = document.createElement('div');
       container.className = 'image-fallback-container';
+      if (colors && colors.length >= 2) {
+        container.style.background = `linear-gradient(135deg, ${colors[0]}, ${colors[1]})`;
+      } else {
+        container.style.background = 'linear-gradient(135deg, var(--indigo), var(--blue))';
+      }
       container.innerHTML = `<span>${initials}</span>`;
       imgEl.parentNode.replaceChild(container, imgEl);
     }
 
-
     // ==========================================
-    // C. HERO NAME & STAT COUNTERS
+    // 5. HERO STAT COUNTERS ANIMATION
     // ==========================================
     function animateCounters() {
       const counters = document.querySelectorAll('.stat-number');
-      counters.forEach(counter => {
-        const target = +counter.getAttribute('data-target');
+      counters.forEach((counter, idx) => {
+        const target = +counter.getAttribute('data-count');
         let current = 0;
         const duration = 1500; // ms
         const stepTime = 30; // ms
@@ -3377,16 +3762,15 @@
         let timer = setInterval(() => {
           current += increment;
           if (current >= target) {
-            counter.textContent = target;
+            counter.textContent = target + (idx < 2 ? "+" : "");
             clearInterval(timer);
           } else {
-            counter.textContent = Math.floor(current);
+            counter.textContent = Math.floor(current) + (idx < 2 ? "+" : "");
           }
         }, stepTime);
       });
     }
 
-    // Trigger counters on load/scroll
     const statsObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -3394,143 +3778,148 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.2 });
     
     const statsContainer = document.querySelector('.hero-stats-container');
     if (statsContainer) {
       statsObserver.observe(statsContainer);
     }
 
-
     // ==========================================
-    // D. TYPING ANIMATION (ROLES CYCLING)
+    // 6. VANILLA JS TYPEWRITER ANIMATION
     // ==========================================
-    const roles = ["Web Developer", "Agency Founder", "UI/UX Designer", "Digital Marketer"];
-    let roleIdx = 0;
-    let charIdx = 0;
+    const typedTextEl = document.getElementById('typed-text');
+    const rolesArray = ["Web Developer", "Agency Founder", "UI/UX Designer", "Digital Marketer"];
+    let wordIndex = 0;
+    let charIndex = 0;
     let isDeleting = false;
-    const typedRoleSpan = document.querySelector('.typed-role');
 
-    function cycleRoles() {
-      const currentRoleText = roles[roleIdx];
-      
+    function typewriter() {
+      const currentWord = rolesArray[wordIndex];
       if (isDeleting) {
-        typedRoleSpan.textContent = currentRoleText.substring(0, charIdx - 1);
-        charIdx--;
+        typedTextEl.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
       } else {
-        typedRoleSpan.textContent = currentRoleText.substring(0, charIdx + 1);
-        charIdx++;
+        typedTextEl.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
       }
 
-      let nextTimeout = isDeleting ? 40 : 80;
+      let timeoutVal = isDeleting ? 50 : 90;
 
-      if (!isDeleting && charIdx === currentRoleText.length) {
-        // Finished writing, pause before delete
+      if (!isDeleting && charIndex === currentWord.length) {
+        timeoutVal = 1800; // Complete pause
         isDeleting = true;
-        nextTimeout = 2000;
-      } else if (isDeleting && charIdx === 0) {
-        // Finished deleting, shift to next word
+      } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        roleIdx = (roleIdx + 1) % roles.length;
-        nextTimeout = 400;
+        wordIndex = (wordIndex + 1) % rolesArray.length;
+        timeoutVal = 400; // Short pause before starting next word
       }
 
-      setTimeout(cycleRoles, nextTimeout);
+      setTimeout(typewriter, timeoutVal);
     }
-    // Start Typing cycle on load
-    setTimeout(cycleRoles, 1000);
 
+    if (typedTextEl) {
+      setTimeout(typewriter, 600);
+    }
 
     // ==========================================
-    // E. NAVBAR SCROLL EFFECT & ACTIVE STATE
+    // 7. ACTIVE NAVBAR LINK HIGHLIGHT (OBSERVER)
     // ==========================================
+    const observedSections = document.querySelectorAll('section[id]');
+    const navHighlightObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.getAttribute('id');
+          const navLinks = document.querySelectorAll('.nav-link, .mobile-menu-link');
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('nav-active');
+            } else {
+              link.classList.remove('nav-active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observedSections.forEach(sec => navHighlightObserver.observe(sec));
+
+    // Navbar Scroll Shadow activation
     const navbar = document.getElementById('navbar');
-    const sections = document.querySelectorAll('section[id]');
-
     window.addEventListener('scroll', () => {
-      // 1. Scroll shadow activation
       if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
-
-      // 2. Active nav link highlighting
-      let currentSectionId = '';
-      sections.forEach(sec => {
-        const secTop = sec.offsetTop - 120;
-        const secHeight = sec.clientHeight;
-        if (window.scrollY >= secTop && window.scrollY < secTop + secHeight) {
-          currentSectionId = sec.getAttribute('id');
-        }
-      });
-
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.classList.remove('active-section');
-        if (link.getAttribute('href') === `#${currentSectionId}`) {
-          link.classList.add('active-section');
-        }
-      });
     });
 
-
     // ==========================================
-    // F. MOBILE NAVIGATION MENU OVERLAY
+    // 8. MOBILE HAMBURGER MENU OVERLAY SYSTEM
     // ==========================================
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileMenuClose = document.getElementById('mobileMenuClose');
     const mobileLinks = document.querySelectorAll('.mobile-menu-link');
 
-    hamburger.addEventListener('click', () => {
+    function openMobileMenu() {
       mobileMenu.classList.add('open');
-    });
+      hamburger.classList.add('open');
+      document.body.classList.add('loading');
+    }
 
-    mobileMenuClose.addEventListener('click', () => {
+    function closeMobileMenu() {
       mobileMenu.classList.remove('open');
-    });
+      hamburger.classList.remove('open');
+      document.body.classList.remove('loading');
+    }
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-      });
-    });
-
-    // Close menu when clicking backdrop
-    mobileMenu.addEventListener('click', (e) => {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.remove('open');
+    hamburger.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
       }
     });
 
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close when clicking backdrop
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        closeMobileMenu();
+      }
+    });
 
     // ==========================================
-    // G. INTERSECTION OBSERVER FOR SCROLL REVEALS
+    // 9. REVEAL ANIMATIONS (INTERSECTION OBSERVER)
     // ==========================================
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          entry.target.classList.add('up');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
 
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
       revealObserver.observe(el);
     });
 
-
     // ==========================================
-    // H. STAGGERED SKILLS CHIPS REVEAL
+    // 10. STAGGERED SKILLS CHIPS REVEAL
     // ==========================================
-    const skillsCategoryObserver = new IntersectionObserver((entries, observer) => {
+    const skillsObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const chips = entry.target.querySelectorAll('.skill-chip');
           chips.forEach((chip, index) => {
-            chip.style.transitionDelay = `${index * 50}ms`;
+            chip.style.animationDelay = `${index * 45}ms`;
             chip.classList.add('animate');
           });
           observer.unobserve(entry.target);
@@ -3539,51 +3928,51 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.skills-category').forEach(cat => {
-      skillsCategoryObserver.observe(cat);
+      skillsObserver.observe(cat);
     });
 
-
     // ==========================================
-    // I. TIMELINECONNECTOR DRAWING ON SCROLL
+    // 11. TIMELINE LINE DRAW ANIMATION & SCROLL PROGRESS
     // ==========================================
-    const experienceSection = document.getElementById('experience');
-    const timelineContainer = document.querySelector('.experience-timeline');
-    const progressLine = document.querySelector('.timeline-line-progress');
-
-    function updateTimelineProgress() {
-      if (!timelineContainer || !progressLine) return;
-      const rect = timelineContainer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      // Line draws from top of timeline to bottom as it scrolls
-      const startPoint = windowHeight * 0.75; 
-      const endPoint = windowHeight * 0.25;   
-      
-      const containerHeight = rect.height;
-      const progress = (startPoint - rect.top) / (containerHeight + (startPoint - endPoint));
-      const percent = Math.min(Math.max(progress * 100, 0), 100);
-      
-      progressLine.style.height = `${percent}%`;
-    }
-
-    const timelineObserver = new IntersectionObserver((entries) => {
+    const timelineObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          window.addEventListener('scroll', updateTimelineProgress);
-          updateTimelineProgress();
-        } else {
-          window.removeEventListener('scroll', updateTimelineProgress);
+          entry.target.classList.add('animate-line');
+          observer.unobserve(entry.target);
         }
       });
-    }, { rootMargin: '100px 0px 100px 0px' });
+    }, { threshold: 0.15 });
 
-    if (experienceSection) {
-      timelineObserver.observe(experienceSection);
+    document.querySelectorAll('.timeline').forEach(timelineEl => {
+      timelineObserver.observe(timelineEl);
+    });
+
+    // Dynamic scroll timeline progress indicator (gives color on scroll)
+    function updateTimelineProgress() {
+      document.querySelectorAll('.timeline').forEach(timeline => {
+        const progressLine = timeline.querySelector('.timeline-line-progress');
+        if (!progressLine) return;
+        
+        const rect = timeline.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        const startPoint = windowHeight * 0.75; 
+        const endPoint = windowHeight * 0.25;   
+        
+        const containerHeight = rect.height;
+        const progress = (startPoint - rect.top) / (containerHeight + (startPoint - endPoint));
+        const percent = Math.min(Math.max(progress * 100, 0), 100);
+        
+        progressLine.style.height = `${percent}%`;
+      });
     }
 
+    window.addEventListener('scroll', updateTimelineProgress);
+    window.addEventListener('resize', updateTimelineProgress);
+    setTimeout(updateTimelineProgress, 100);
 
     // ==========================================
-    // J. PROJECTS CAROUSEL: DRAG SCROLL WITH MOMENTUM
+    // 12. PROJECTS CAROUSEL DRAG & TOUCH SCROLL
     // ==========================================
     const carousel = document.getElementById('projectsCarousel');
     const scrollProgress = document.getElementById('scrollProgress');
@@ -3606,10 +3995,9 @@
       const scrollPercent = (carousel.scrollLeft / maxScroll) * 100;
       scrollProgress.style.width = `${scrollPercent}%`;
     }
-    // Initialize Progress
     updateCarouselProgressBar();
 
-    // Mouse Listeners
+    // MOUSE DRAG LISTENERS
     carousel.addEventListener('mousedown', (e) => {
       isDown = true;
       isDraggingMovement = false;
@@ -3617,7 +4005,6 @@
       startX = e.pageX - carousel.offsetLeft;
       scrollLeft = carousel.scrollLeft;
       
-      // Stop inertia
       cancelAnimationFrame(animationId);
       velocity = 0;
       lastX = e.pageX;
@@ -3651,7 +4038,6 @@
       
       carousel.scrollLeft = scrollLeft - walk;
 
-      // Calculate drag velocity
       const now = performance.now();
       const dt = now - lastTime;
       if (dt > 0) {
@@ -3662,9 +4048,55 @@
       lastTime = now;
     });
 
+    // TOUCH DRAG LISTENERS (UPGRADE 9)
+    let touchStartX = 0;
+    let touchScrollLeft = 0;
 
+    carousel.addEventListener('touchstart', (e) => {
+      isDown = true;
+      isDraggingMovement = false;
+      touchStartX = e.touches[0].clientX;
+      touchScrollLeft = carousel.scrollLeft;
+      carousel.classList.add('active-dragging');
+      
+      cancelAnimationFrame(animationId);
+      velocity = 0;
+      lastX = e.touches[0].clientX;
+      lastTime = performance.now();
+    }, { passive: true });
 
-    // Prevent navigation click triggers when dragging
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDown) return;
+      const touchX = e.touches[0].clientX;
+      const deltaX = touchX - touchStartX;
+      carousel.scrollLeft = touchScrollLeft - deltaX;
+
+      if (Math.abs(touchX - lastX) > 2) {
+        isDraggingMovement = true;
+      }
+
+      const now = performance.now();
+      const dt = now - lastTime;
+      if (dt > 0) {
+        const dx = touchX - lastX;
+        velocity = dx / dt;
+      }
+      lastX = touchX;
+      lastTime = now;
+
+      // Prevent vertical page scroll only when actively dragging horizontally
+      if (Math.abs(deltaX) > 8) {
+        if (e.cancelable) e.preventDefault();
+      }
+    }, { passive: false });
+
+    carousel.addEventListener('touchend', () => {
+      isDown = false;
+      carousel.classList.remove('active-dragging');
+      applyInertia();
+    });
+
+    // Prevent navigation clicks when dragging
     carousel.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', (e) => {
         if (isDraggingMovement) {
@@ -3673,11 +4105,10 @@
       });
     });
 
-    // Glide animation
+    // Inertia Glide animation
     function applyInertia() {
       if (Math.abs(velocity) < 0.1) return;
-      
-      const friction = 0.94; // Slide damping
+      const friction = 0.94;
       function step() {
         if (isDown) return;
         carousel.scrollLeft -= velocity * 16;
