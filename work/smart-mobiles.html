@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Smart Mobiles — Case Study | Abdul Ajees M</title>
+  <meta name="description" content="Read the case study of Smart Mobiles Muthupet. Learn how a 16-year-old phone repair shop got its first professional digital presence, bilingual PWA, and verified Google reviews.">
+  <meta name="author" content="Abdul Ajees M">
+
+  <!-- Google Fonts Connection -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       DESIGN SYSTEM & CSS RESET (DARK THEME)
+       ========================================== */
+    :root {
+      --bg: #0D0D0B;
+      --bg2: #121210;
+      --bg3: #1A1A18;
+      --ink: #FAFAF8;
+      --ink2: #ECEAE4;
+      --ink3: #B0AFA8;
+      --ink4: #7A7970;
+      --indigo: #4F8EF7;
+      --blue: #4F8EF7;
+      --blue2: rgba(79, 142, 247, 0.1);
+      --line: rgba(255, 255, 255, 0.08);
+      --card: rgba(255, 255, 255, 0.03);
+      --dark: #0D0D0B;
+      
+      --font-headings: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+      
+      --shadow: 0 8px 32px rgba(0,0,0,.3);
+      --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      body, a, button, [role="button"], .interactive-hover {
+        cursor: none !important;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-headings);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--ink2);
+      font-weight: 300;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-fast);
+    }
+
+    /* Layout utilities */
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 5rem 0;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--indigo);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.75rem;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 800;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title em {
+      font-family: var(--font-headings);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--indigo);
+    }
+
+    /* Custom Interactive Cursor */
+    #cur-dot, #cur-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      transform: translate3d(-50%, -50%, 0);
+      display: none;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      #cur-dot {
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: var(--blue);
+        border-radius: 50%;
+        z-index: 9999;
+        transition: width 0.3s, height 0.3s, background-color 0.3s;
+      }
+      #cur-ring {
+        display: block;
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--blue);
+        border-radius: 50%;
+        z-index: 9998;
+        transition: width 0.3s, height 0.3s, border-color 0.3s, background-color 0.3s, opacity 0.3s;
+      }
+      #cur-dot.active {
+        width: 10px;
+        height: 10px;
+        background-color: var(--blue);
+      }
+      #cur-ring.hovered {
+        background-color: rgba(79, 142, 247, 0.08) !important;
+        border-color: var(--blue) !important;
+        width: 56px !important;
+        height: 56px !important;
+        opacity: 1 !important;
+      }
+    }
+
+    /* Floating Navbar */
+    .navbar {
+      position: fixed;
+      top: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(780px, 90vw);
+      height: 4.5rem;
+      background: rgba(13, 13, 11, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      z-index: 500;
+      transition: var(--transition-smooth);
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+      background: rgba(13, 13, 11, 0.95);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 1.5rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-headings);
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--indigo);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .nav-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink2);
+      transition: var(--transition-fast);
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 1.5px;
+      background: var(--indigo);
+      transform: translateX(-50%);
+      transition: var(--transition-fast);
+    }
+
+    .nav-link:hover, .nav-link.nav-active {
+      color: var(--indigo);
+    }
+
+    .nav-link.nav-active::after {
+      width: 60%;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-btn {
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      border-radius: 100px;
+      font-weight: 500;
+      background: var(--indigo);
+      color: white;
+    }
+
+    .nav-btn:hover {
+      background: var(--ink);
+      box-shadow: 0 4px 12px rgba(79, 142, 247, 0.3);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      z-index: 505;
+      padding: 0;
+    }
+
+    .hamburger .bar {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    }
+
+    .hamburger .bar-1 { top: 0; }
+    .hamburger .bar-2 { top: 9px; }
+    .hamburger .bar-3 { top: 18px; }
+
+    .hamburger.open .bar {
+      background: white;
+    }
+    .hamburger.open .bar-1 { transform: translateY(9px) rotate(45deg); }
+    .hamburger.open .bar-2 { opacity: 0; }
+    .hamburger.open .bar-3 { transform: translateY(-9px) rotate(-45deg); }
+
+    /* Mobile Drawer */
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 600;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-menu-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-drawer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: min(300px, 75vw);
+      height: 100%;
+      background: #121210;
+      border-left: 1px solid var(--line);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mobile-menu-overlay.open .mobile-menu-drawer {
+      transform: translateX(0);
+    }
+
+    .mobile-menu-close {
+      align-self: flex-end;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-fast);
+    }
+
+    .mobile-menu-close:hover {
+      color: var(--blue);
+      transform: rotate(90deg);
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .mobile-menu-link {
+      font-family: var(--font-headings);
+      font-size: 1.75rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      transition: var(--transition-fast);
+      padding: 0.25rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .mobile-menu-link:hover {
+      color: var(--blue);
+      padding-left: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .nav-btn { display: none; }
+    }
+
+    /* Page Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .preloader-content {
+      font-family: var(--font-headings);
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--indigo);
+      animation: preloaderPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes preloaderPulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    body.loading {
+      overflow: hidden !important;
+      height: 100vh !important;
+    }
+
+    /* Case Study Page styling */
+    .hero-section {
+      padding-top: 10rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .case-title {
+      font-size: clamp(3rem, 6vw, 4.75rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .case-subheading {
+      font-family: var(--font-headings);
+      font-style: italic;
+      font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+      color: var(--ink2);
+      font-weight: 400;
+      line-height: 1.5;
+      max-width: 800px;
+    }
+
+    /* Project details block */
+    .details-block {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+    }
+
+    .details-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .details-label {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink3);
+    }
+
+    .details-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .details-value a {
+      color: var(--indigo);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .details-value a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .details-block {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .details-block {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1.75rem;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Standard content section styling */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .content-left {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .content-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .content-left {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    /* Outcome Cards */
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .outcome-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--indigo);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: var(--transition-smooth);
+    }
+
+    .outcome-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(79, 142, 247, 0.3);
+      box-shadow: var(--shadow);
+    }
+
+    .outcome-num {
+      font-family: var(--font-headings);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--blue);
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .outcome-text {
+      font-size: 0.95rem;
+      color: var(--ink2);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .outcome-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Client Feedback Quote Cards */
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .feedback-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+
+    .feedback-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .quote-icon {
+      font-family: var(--font-headings);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--indigo);
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      opacity: 0.1;
+    }
+
+    .quote-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .quote-divider {
+      height: 1px;
+      background: var(--line);
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-author {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .author-name {
+      font-family: var(--font-headings);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .author-role {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .stars {
+      color: #FFB300;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 900px) {
+      .feedback-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Bottom Footer CTA block */
+    .cta-section {
+      background: var(--bg2);
+      text-align: center;
+      padding: 6rem 0;
+    }
+
+    .cta-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      padding: 0.85rem 2.25rem;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      transition: var(--transition-fast);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--indigo);
+      color: white;
+      box-shadow: 0 6px 20px rgba(79, 142, 247, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: white;
+      color: var(--bg);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-outline {
+      border-color: var(--ink3);
+      background: transparent;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .btn-outline:hover {
+      background: var(--bg3);
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .btn-outline:hover svg {
+      transform: translateX(-4px);
+    }
+
+    .btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Footer styling */
+    .footer {
+      background: var(--bg);
+      border-top: 1px solid var(--line);
+      padding: 2.5rem 0;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.78rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-link:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body class="loading">
+
+  <!-- Page Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">AA.</div>
+  </div>
+
+  <!-- Custom Cursor Elements -->
+  <div id="cur-dot"></div>
+  <div id="cur-ring"></div>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="/" class="nav-logo interactive-hover">Abdul Ajees M.</a>
+        <div class="nav-links">
+          <a href="/#about" class="nav-link interactive-hover">About</a>
+          <a href="/#skills" class="nav-link interactive-hover">Skills</a>
+          <a href="/#experience" class="nav-link interactive-hover">Experience</a>
+          <a href="/#education" class="nav-link interactive-hover">Education</a>
+          <a href="/#projects" class="nav-link nav-active interactive-hover">Projects</a>
+          <a href="/#testimonials" class="nav-link interactive-hover">Testimonials</a>
+          <a href="/#awards" class="nav-link interactive-hover">Awards</a>
+          <a href="/#contact" class="nav-link interactive-hover">Contact</a>
+        </div>
+        <div class="nav-right">
+          <button class="hamburger interactive-hover" id="hamburger" aria-label="Open Navigation Menu">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+          </button>
+          <a href="/#contact" class="btn btn-primary nav-btn interactive-hover">Hire Me</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Side-Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-drawer">
+      <button class="mobile-menu-close interactive-hover" id="mobileMenuClose" aria-label="Close Navigation Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="mobile-menu-links">
+        <a href="/" class="mobile-menu-link interactive-hover">Home</a>
+        <a href="/#about" class="mobile-menu-link interactive-hover">About</a>
+        <a href="/#skills" class="mobile-menu-link interactive-hover">Skills</a>
+        <a href="/#experience" class="mobile-menu-link interactive-hover">Experience</a>
+        <a href="/#education" class="mobile-menu-link interactive-hover">Education</a>
+        <a href="/#projects" class="mobile-menu-link interactive-hover">Projects</a>
+        <a href="/#testimonials" class="mobile-menu-link interactive-hover">Testimonials</a>
+        <a href="/#awards" class="mobile-menu-link interactive-hover">Awards</a>
+        <a href="/#contact" class="mobile-menu-link interactive-hover">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main role="main">
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <span class="section-label">Real Client · Local Business · 2026</span>
+        <h1 class="case-title">Smart Mobiles</h1>
+        <p class="case-subheading">
+          How a 16-year-old phone repair shop in Muthupet got its first professional digital presence — and two Google reviews within weeks of launch.
+        </p>
+
+        <!-- Project details block -->
+        <div class="details-block">
+          <div class="details-item">
+            <span class="details-label">Client</span>
+            <span class="details-value">Smart Mobiles, Muthupet</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Type</span>
+            <span class="details-value">Real Client Project</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Delivered</span>
+            <span class="details-value">2026</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Stack</span>
+            <span class="details-value">HTML, CSS, JS, PWA</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Live Site</span>
+            <span class="details-value">
+              <a href="https://smartmobiles.vercel.app" target="_blank" rel="noopener noreferrer" class="interactive-hover">
+                <span>smartmobiles.app</span>
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         THE PROBLEM SECTION
+         ========================================== -->
+    <section>
+      <div class="container">
+        <div class="content-grid">
+          <div class="content-left">
+            <h2 class="section-title">The <em>Problem</em></h2>
+          </div>
+          <div class="content-right">
+            <p>
+              Smart Mobiles had been operating in Muthupet, Tamil Nadu for 16 years — a trusted local phone repair business with no digital presence at all. No website. No Google Business listing actively managed. No way for new customers to find them online or verify their hours and location before visiting.
+            </p>
+            <p>
+              The owner had no professional email either — making digital communication impossible. For a business with an exceptional local reputation, the total lack of digital visibility meant they were missing out on potential customers who searched online for device repair services in the Muthupet region.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         THE SOLUTION SECTION
+         ========================================== -->
+    <section>
+      <div class="container">
+        <div class="content-grid">
+          <div class="content-left">
+            <h2 class="section-title">What I <em>Built</em></h2>
+          </div>
+          <div class="content-right">
+            <p>
+              I built a Progressive Web App — bilingual in Tamil and English — that solved each problem directly. It features auto-updating business hours and location indicators so customers always see accurate information. Since the app is PWA-enabled, customers can install it directly on their phones like a native application.
+            </p>
+            <p>
+              The application uses a clean, fast, mobile-first design built specifically for the customers who would actually use it, maintaining instant performance even on slower local cellular connections.
+            </p>
+            <p>
+              <strong>Beyond the website:</strong> I recovered the owner's email account, set up their Google Business profile properly, and designed and printed a custom QR code placed in-store directing customers to leave Google reviews. Within weeks of launch, two verified five-star Google reviews came in from real customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         THE OUTCOME SECTION
+         ========================================== -->
+    <section>
+      <div class="container">
+        <span class="section-label">Results</span>
+        <h2 class="section-title">The <em>Outcome</em></h2>
+        
+        <div class="outcome-grid">
+          <!-- Card 1 -->
+          <div class="outcome-card">
+            <span class="outcome-num">01</span>
+            <span class="outcome-text">First professional digital presence in 16 years of business operation</span>
+          </div>
+          <!-- Card 2 -->
+          <div class="outcome-card">
+            <span class="outcome-num">02</span>
+            <span class="outcome-text">Bilingual PWA — Tamil and English — serving the actual customer base</span>
+          </div>
+          <!-- Card 3 -->
+          <div class="outcome-card">
+            <span class="outcome-num">03</span>
+            <span class="outcome-text">Two verified Google reviews within weeks of launch via in-store QR campaign</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CLIENT FEEDBACK SECTION
+         ========================================== -->
+    <section>
+      <div class="container">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title">What the <em>Client Said</em></h2>
+        
+        <div class="feedback-grid">
+          <!-- Quote 1 -->
+          <div class="feedback-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">
+              "The website looks modern and well organised. Our customers can easily see the services we offer, our working hours, and our location without any confusion. The information is presented clearly, and the automatic updates for timings and location are very useful. We appreciate the attention to detail and the professional work."
+            </p>
+            <div class="quote-divider"></div>
+            <div class="quote-author">
+              <span class="author-name">Mujbur Rahmman</span>
+              <span class="author-role">Owner, Smart Mobiles · Google Review <span class="stars">★★★★★</span></span>
+            </div>
+          </div>
+          
+          <!-- Quote 2 -->
+          <div class="feedback-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text">
+              "We are very happy with our new website. The design is clean, professional, and easy for customers to use. It clearly explains our services, business hours, and contact details. The website stays updated with our timings and location, making it easier for customers to find us."
+            </p>
+            <div class="quote-divider"></div>
+            <div class="quote-author">
+              <span class="author-name">Nazar Hussain</span>
+              <span class="author-role">Owner, Smart Mobiles · Google Review <span class="stars">★★★★★</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER CTA
+         ========================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <h2 class="cta-title">Interested in a similar project?</h2>
+        <div class="cta-buttons">
+          <a href="mailto:hello@safrlabs.in" class="btn btn-primary interactive-hover">
+            <span>Start a Project</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="/" class="btn btn-outline interactive-hover">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Back to Portfolio</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div>Designed & built by Abdul Ajees M © 2026</div>
+        <div class="footer-right">
+          <a href="https://github.com/abd-0412" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">GitHub</a>
+          <a href="https://linkedin.com/in/abdul-ajees-m" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">LinkedIn</a>
+          <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">Safr Labs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Page Preloader Logic
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.style.opacity = "0";
+          setTimeout(() => {
+            preloader.style.display = "none";
+            document.body.classList.remove("loading");
+          }, 500);
+        }
+      }, 300);
+    });
+
+    // Navbar Scroll Shadow activation
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile Hamburger Overlay System
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileLinks = document.querySelectorAll('.mobile-menu-link');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      hamburger.classList.add('open');
+      document.body.classList.add('loading');
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      document.body.classList.remove('loading');
+    }
+
+    hamburger.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) closeMobileMenu();
+    });
+
+    // Custom Interactive Cursor
+    const dot = document.getElementById('cur-dot');
+    const ring = document.getElementById('cur-ring');
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+    let hasMoved = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      hasMoved = true;
+    });
+
+    function updateCursor() {
+      if (hasMoved) {
+        dotX = mouseX;
+        dotY = mouseY;
+        dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate3d(-50%, -50%, 0)`;
+
+        ringX += (mouseX - ringX) * 0.28;
+        ringY += (mouseY - ringY) * 0.28;
+        ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate3d(-50%, -50%, 0)`;
+      }
+      requestAnimationFrame(updateCursor);
+    }
+    requestAnimationFrame(updateCursor);
+
+    document.addEventListener('mouseleave', () => {
+      dot.style.display = 'none';
+      ring.style.display = 'none';
+    });
+    document.addEventListener('mouseenter', () => {
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        dot.style.display = 'block';
+        ring.style.display = 'block';
+      }
+    });
+
+    const hoverTargets = document.querySelectorAll('a, button, .interactive-hover');
+    hoverTargets.forEach(target => {
+      target.addEventListener('mouseenter', () => {
+        dot.classList.add('active');
+        ring.classList.add('hovered');
+      });
+      target.addEventListener('mouseleave', () => {
+        dot.classList.remove('active');
+        ring.classList.remove('hovered');
+      });
+    });
+  </script>
+</body>
+</html>

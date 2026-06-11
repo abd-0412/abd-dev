@@ -5,61 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India</title>
-  <meta name="description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
-  <meta name="keywords" content="web developer tamil nadu, mern stack developer india, digital marketing agency tamil nadu, safr labs, abdul ajees m, freelance web developer, b.tech it student developer">
+  <title>Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu</title>
+  <meta name="description" content="Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs. Final year B.Tech IT student delivering production websites for real businesses. Available for freelance and full-time roles.">
+  <meta name="keywords" content="web developer tamil nadu, freelance web developer india, mern stack developer tamil nadu, website design tamil nadu, abdul ajees m, safr labs founder, b.tech it developer, web developer muthupet, next.js developer india">
   <meta name="author" content="Abdul Ajees M">
   
   <!-- Canonical Link -->
-  <link rel="canonical" href="https://abd-developer.vercel.app/">
+  <link rel="canonical" href="https://abd-developer.vercel.app/" />
+  
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="manifest" href="/manifest.json">
+  
+  <!-- Preload Hero Image -->
+  <link rel="preload" href="assets/images/azee-professional.jpg" as="image">
   
   <!-- Open Graph / Facebook Meta Tags -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://abd-developer.vercel.app/">
-  <meta property="og:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
-  <meta property="og:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
-  <meta property="og:image" content="assets/images/azee pic.jpg">
+  <meta property="og:title" content="Abdul Ajees M — Web Developer & Agency Founder">
+  <meta property="og:description" content="Tamil Nadu-based web developer. Founder of Safr Labs. Building production websites for real businesses.">
+  <meta property="og:url" content="https://abd-developer.vercel.app">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://abd-developer.vercel.app/assets/images/azee-professional.jpg">
+  <meta property="og:locale" content="en_IN">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://abd-developer.vercel.app/">
-  <meta name="twitter:title" content="Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu, India">
-  <meta name="twitter:description" content="Abdul Ajees M is a Tamil Nadu-based web developer, MERN stack developer, and founder of Safr Labs — a digital marketing agency. Available for freelance projects and full-time roles.">
-  <meta name="twitter:image" content="assets/images/azee pic.jpg">
-
-  <!-- Schema.org JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abdul Ajees M",
-    "jobTitle": "Web Developer & Agency Founder",
-    "url": "https://abd-developer.vercel.app/",
-    "image": "https://abd-developer.vercel.app/assets/images/azee pic.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": "Tamil Nadu",
-      "addressCountry": "India"
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "K. Ramakrishnan College of Engineering",
-      "alternateName": "KRCE"
-    },
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Safr Labs",
-      "url": "https://www.safrlabs.in"
-    },
-    "sameAs": [
-      "https://github.com/abd-0412",
-      "https://www.linkedin.com/in/abdul-ajees-m/",
-      "https://www.instagram.com/_abdazee_/",
-      "https://www.safrlabs.in",
-      "https://abd-developer.vercel.app/"
-    ]
-  }
-  </script>
+  <meta name="twitter:title" content="Abdul Ajees M — Web Developer & Agency Founder">
+  <meta name="twitter:description" content="Tamil Nadu-based web developer and Safr Labs founder. Available for freelance and full-time roles.">
+  <meta name="twitter:image" content="https://abd-developer.vercel.app/assets/images/azee-professional.jpg">
 
   <!-- Google Fonts Connection -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -645,6 +617,7 @@
       gap: 1.25rem;
       flex-wrap: wrap;
       margin-bottom: 3.5rem;
+      align-items: flex-start;
     }
 
     .hero-cta .btn {
@@ -1586,6 +1559,100 @@
     }
 
     /* ==========================================
+       11.5 CLIENT TESTIMONIALS (DARK EDITORIAL)
+       ========================================== */
+    .testimonials-section {
+      background: #0D0D0B;
+      color: white;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 3rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition-smooth);
+    }
+    .testimonial-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    }
+    .testimonial-quote-icon {
+      font-family: var(--font-headings);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--blue);
+      position: absolute;
+      top: 1.5rem;
+      left: 2rem;
+      opacity: 0.15;
+    }
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .author-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .author-name {
+      font-family: var(--font-headings);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+    }
+    .author-role {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .testimonial-badge {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.25rem;
+    }
+    @media (max-width: 900px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .testimonial-card {
+        padding: 2.25rem;
+      }
+    }
+
+    /* ==========================================
        12. CERTIFICATIONS & ACHIEVEMENTS
        ========================================== */
     .cert-grid {
@@ -1852,6 +1919,154 @@
 
     .agency-link:hover {
       color: var(--blue);
+    }
+
+    /* ==========================================
+       13.5 STICKY CTA BAR & FLOATING WHATSAPP
+       ========================================== */
+    #sticky-cta-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0D0D0B;
+      color: white;
+      border-top: 2px solid var(--indigo);
+      z-index: 999;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+    }
+    #sticky-cta-bar.visible {
+      transform: translateY(0);
+    }
+    .sticky-cta-left {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .sticky-cta-right {
+      display: flex;
+      gap: 1rem;
+    }
+    .sticky-cta-btn {
+      padding: 0.75rem 1.75rem;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: var(--transition-fast);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .sticky-cta-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .sticky-cta-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    }
+    .sticky-cta-email {
+      background: var(--indigo);
+      color: white;
+    }
+    .sticky-cta-email:hover {
+      background: var(--blue);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(45, 43, 143, 0.3);
+    }
+
+    #whatsapp-floating {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+      z-index: 998;
+      transition: transform 0.3s ease, bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+      text-decoration: none;
+    }
+    #whatsapp-floating:hover {
+      transform: scale(1.08) translateY(-2px);
+      background: #128C7E;
+    }
+    #whatsapp-floating svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+    .whatsapp-pulse {
+      animation: wa-pulse-anim 2s infinite;
+    }
+    @keyframes wa-pulse-anim {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    #whatsapp-floating::before {
+      content: "Chat on WhatsApp";
+      position: absolute;
+      right: 70px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-family: var(--font-body);
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    #whatsapp-floating:hover::before {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      #sticky-cta-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+        text-align: center;
+      }
+      .sticky-cta-left {
+        font-size: 0.88rem;
+        justify-content: center;
+      }
+      .sticky-cta-right {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .sticky-cta-btn {
+        width: 100%;
+        padding: 0.65rem;
+      }
     }
 
     /* ==========================================
@@ -2297,8 +2512,6 @@
       z-index: 2;
     }
 
-
-
     /* Active Link highlight (Upgrade 3) */
     .nav-active {
       color: var(--indigo) !important;
@@ -2384,6 +2597,80 @@
     .project-link-btn:hover svg {
       transform: translate(2px, -2px);
     }
+
+    .project-case-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--ink2) !important;
+      border: 1px solid var(--line);
+      padding: 0.4rem 0.9rem;
+      border-radius: 100px;
+      transition: var(--transition-fast);
+      text-decoration: none;
+    }
+    .project-case-btn:hover {
+      background: var(--bg3);
+      color: var(--indigo) !important;
+      border-color: var(--indigo);
+    }
+
+    /* FAQ Accordion Styles */
+    .faq-section {
+      background: #0D0D0B;
+      color: white;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 6rem 0;
+    }
+    .faq-list {
+      max-width: 800px;
+      margin: 3.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 1.25rem;
+    }
+    .faq-item[open] summary {
+      color: var(--blue);
+    }
+    .faq-item summary {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      list-style: none;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-item summary::after {
+      content: '+';
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--blue);
+      transition: transform 0.3s ease;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: 300;
+      padding: 0.75rem 0 0.5rem 0;
+    }
   </style>
 </head>
 <body>
@@ -2402,7 +2689,7 @@
 
   <!-- Header / Navigation -->
   <header>
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main navigation">
       <div class="nav-container">
         <a href="#" class="nav-logo interactive-hover">Abdul Ajees M.</a>
         <div class="nav-links">
@@ -2411,6 +2698,7 @@
           <a href="#experience" class="nav-link interactive-hover">Experience</a>
           <a href="#education" class="nav-link interactive-hover">Education</a>
           <a href="#projects" class="nav-link interactive-hover">Projects</a>
+          <a href="#testimonials" class="nav-link interactive-hover">Testimonials</a>
           <a href="#awards" class="nav-link interactive-hover">Awards</a>
           <a href="#contact" class="nav-link interactive-hover">Contact</a>
         </div>
@@ -2442,13 +2730,14 @@
         <a href="#experience" class="mobile-menu-link interactive-hover">Experience</a>
         <a href="#education" class="mobile-menu-link interactive-hover">Education</a>
         <a href="#projects" class="mobile-menu-link interactive-hover">Projects</a>
+        <a href="#testimonials" class="mobile-menu-link interactive-hover">Testimonials</a>
         <a href="#awards" class="mobile-menu-link interactive-hover">Awards</a>
         <a href="#contact" class="mobile-menu-link interactive-hover">Contact</a>
       </div>
     </div>
   </div>
 
-  <main>
+  <main role="main">
     
     <!-- ==========================================
          SECTION 2: HERO SECTION
@@ -2461,13 +2750,13 @@
           <div class="hero-left">
             <div class="availability-badge">
               <span class="pulsing-dot"></span>
-              <span>Open to jobs & freelance</span>
+              <span>Available — Currently taking projects · June 2026</span>
             </div>
             
             <!-- Mobile-only Hero Graphics -->
             <div class="hero-right-mobile">
               <div class="photo-frame">
-                <img src="assets/images/azee pic.jpg" alt="Abdul Ajees M" onerror="handleImageError(this, 'AA')">
+                <img src="assets/images/azee-professional.jpg" fetchpriority="high" alt="Abdul Ajees M — Web Developer and Founder of Safr Labs, Tamil Nadu" onerror="handleImageError(this, 'AA')">
               </div>
               
               <!-- Floating cards -->
@@ -2475,7 +2764,7 @@
                 <div class="pulsing-dot"></div>
                 <div>
                   <span class="label">Status</span>
-                  <span class="value">Available for work</span>
+                  <span class="value">Available — Currently taking projects · June 2026</span>
                 </div>
               </div>
               
@@ -2513,7 +2802,7 @@
             </div>
             
             <p class="hero-desc">
-              Final year B.Tech IT student from Tamil Nadu who builds real things — live agency, real clients, real results. I craft fast, beautiful web experiences and grow brands digitally.
+              Web developer and agency founder from Tamil Nadu. I build production websites for real businesses — 2 clients delivered, 1 live studio, results that show up.
             </p>
             
             <div class="hero-cta">
@@ -2524,14 +2813,17 @@
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </a>
-              <a href="Azee Resume.pdf" download class="btn btn-outline interactive-hover">
-                <span>Download Resume</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                  <polyline points="7 10 12 15 17 10"></polyline>
-                  <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-              </a>
+              <div class="resume-btn-container" style="display: flex; flex-direction: column; align-items: center; gap: 0.45rem;">
+                <a href="Azee_Resume_2026.pdf" download class="btn btn-outline interactive-hover" style="min-width: 230px;">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download Resume (PDF)</span>
+                </a>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink3); text-align: center;">Updated June 2026</span>
+              </div>
             </div>
             
             <div class="hero-stats-container">
@@ -2543,7 +2835,7 @@
               </div>
               <div class="stat-item">
                 <div class="stat-number-wrapper">
-                  <span class="stat-number" data-count="5">0</span>
+                  <span class="stat-number" data-count="6">0</span>
                 </div>
                 <div class="stat-label">Projects Delivered</div>
               </div>
@@ -2559,7 +2851,7 @@
           <!-- Hero Graphics Column -->
           <div class="hero-right">
             <div class="photo-frame">
-              <img src="assets/images/azee pic.jpg" alt="Abdul Ajees M" onerror="handleImageError(this, 'AA')">
+              <img src="assets/images/azee-professional.jpg" fetchpriority="high" alt="Abdul Ajees M — Web Developer and Founder of Safr Labs, Tamil Nadu" onerror="handleImageError(this, 'AA')">
             </div>
             
             <!-- Floating cards (hidden on mobile) -->
@@ -2567,7 +2859,7 @@
               <div class="pulsing-dot"></div>
               <div>
                 <span class="label">Status</span>
-                <span class="value">Available for work</span>
+                <span class="value">Available — Currently taking projects · June 2026</span>
               </div>
             </div>
             
@@ -2773,7 +3065,7 @@
           <!-- Left Column: Photo Reveal -->
           <div class="reveal-left">
             <div class="about-photo-wrapper">
-              <img src="assets/images/azee selfie.jpg" alt="Abdul Ajees M Selfie" onerror="handleImageError(this, 'AM')">
+              <img src="assets/images/azee-professional.jpg" alt="Abdul Ajees M, founder of Safr Labs, Tamil Nadu web developer" onerror="handleImageError(this, 'AM')">
             </div>
           </div>
           
@@ -2785,7 +3077,7 @@
             </p>
             
             <p>
-              In May 2026, I founded Safr Labs — a premium digital marketing agency offering social media management, content creation, and high-performance website development. We've delivered production websites that generated measurable business results for clients across Tamil Nadu.
+              In May 2026, I founded Safr Labs — a premium digital marketing agency offering social media management, content creation, and high-performance website development. I've delivered production websites for real businesses in Tamil Nadu — from construction portfolios to bilingual PWAs for local shops.
             </p>
             
             <p>
@@ -2796,6 +3088,10 @@
               Outside tech, I explore photography and design — anything that trains the eye for beauty and precision.
             </p>
             
+            <p>
+              I started Safr Labs in my final year — not because it was the easy path, but because I wanted to build things that actually work for real businesses. Every project I take on, I treat as if it represents my own brand. That standard is why clients come back.
+            </p>
+
             <!-- Interests Sub-Container -->
             <div class="interests-container">
               <h3 class="interests-title">Core Interests</h3>
@@ -2919,7 +3215,7 @@
                 <span>WordPress</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/></svg>
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
                 <span>Canva</span>
               </span>
             </div>
@@ -2980,7 +3276,7 @@
               <div class="timeline-content">
                 <div class="timeline-meta">
                   <span class="timeline-date">May 2026 — Present</span>
-                  <a href="https://www.safrlabs.in" target="_blank" class="timeline-company interactive-hover">Safr Labs · safrlabs.in →</a>
+                  <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="timeline-company interactive-hover">Safr Labs · safrlabs.in →</a>
                 </div>
                 <h3 class="timeline-role">Founder & Web Developer</h3>
                 <p class="timeline-desc">
@@ -3133,22 +3429,22 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/safrlabs.png" alt="Safr Labs Cover" onerror="handleImageError(this, 'SL', ['#2D2B8F', '#4F8EF7'])">
+              <img src="assets/images/safrlabs.png" loading="lazy" alt="Safr Labs premium website design studio — built by Abdul Ajees M" onerror="handleImageError(this, 'SL', ['#2D2B8F', '#4F8EF7'])">
             </div>
             
             <div class="project-info">
               <span class="project-badge">Own Agency</span>
               <h3 class="project-name">Safr Labs — Digital Marketing Studio</h3>
               <p class="project-desc">
-                Built and run a full-service premium digital marketing agency. Features editorial Next.js architecture, Lighthouse 100 performance scores, bilingual content strategy, and ethical brand positioning. Serving real clients across Tamil Nadu and worldwide.
+                Founded Safr Labs — a live premium website design studio and digital agency. Halal-first and high-performance, built with Next.js and achieving Lighthouse 100 scores.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Next.js</span>
                 <span class="project-tag">SEO</span>
-                <span class="project-tag">Branding</span>
-                <span class="project-tag">Marketing</span>
+                <span class="project-tag">Halal-first</span>
+                <span class="project-tag">Lighthouse 100</span>
               </div>
-              <a href="https://www.safrlabs.in" target="_blank" class="project-link-btn interactive-hover">
+              <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
                 <span>Visit Agency</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -3158,43 +3454,7 @@
             </div>
           </article>
           
-          <!-- Project 2: Nuqtah Studio -->
-          <article class="project-card standard">
-            <div class="browser-chrome">
-              <div class="browser-dots">
-                <span class="browser-dot red"></span>
-                <span class="browser-dot yellow"></span>
-                <span class="browser-dot green"></span>
-              </div>
-              <div class="browser-address">nuqtahstudio.vercel.app</div>
-            </div>
-            
-            <div class="project-visual">
-              <img src="assets/images/nuqtahstudio.png" alt="Nuqtah Studio Cover" onerror="handleImageError(this, 'NS', ['#0D0D0B', '#3A3935'])">
-            </div>
-            
-            <div class="project-info">
-              <span class="project-badge">Client — E-Commerce</span>
-              <h3 class="project-name">Nuqtah Studio</h3>
-              <p class="project-desc">
-                Bespoke e-commerce platform for an Islamic calligraphy and scent art studio. Features custom calligraphy preview module, scent pairing database, and sub-1s page loads. Boosted direct sales by 150%.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">HTML/CSS/JS</span>
-                <span class="project-tag">E-Commerce</span>
-                <span class="project-tag">Performance</span>
-              </div>
-              <a href="https://nuqtahstudio.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
-                <span>View Live</span>
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 3: AK Construction -->
+          <!-- Project 2: AK Construction -->
           <article class="project-card standard">
             <div class="browser-chrome">
               <div class="browser-dots">
@@ -3206,22 +3466,106 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/akconstruction.png" alt="AK Construction Cover" onerror="handleImageError(this, 'AK', ['#E5A93B', '#B0AFA8'])">
+              <img src="assets/images/akconstruction.png" alt="AK Construction corporate portfolio website — built by Abdul Ajees M, Tamil Nadu" loading="lazy" onerror="handleImageError(this, 'AK', ['#E5A93B', '#B0AFA8'])">
             </div>
             
             <div class="project-info">
-              <span class="project-badge">Client — Corporate</span>
+              <span class="project-badge">Real Client — Construction</span>
               <h3 class="project-name">AK Construction</h3>
               <p class="project-desc">
-                High-performance architectural portfolio for a Tamil Nadu builder. Custom sitemaps, large WebP image preloading, elite mobile-first editorial grids, and Lighthouse 100 speed scores. Generated 2.4x growth in inquiry rates.
+                High-performance architectural portfolio for a Tamil Nadu builder. Features custom sitemaps, WebP optimization, elite grids, and sub-1s load times. Achieved a 2.4x growth in digital inquiry rates.
               </p>
               <div class="project-tags">
                 <span class="project-tag">HTML/CSS/JS</span>
                 <span class="project-tag">SEO</span>
-                <span class="project-tag">WebP</span>
                 <span class="project-tag">Performance</span>
+                <span class="project-tag">Conversion</span>
               </div>
-              <a href="https://akconstruction123.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
+              <div class="project-btn-group" style="display: flex; gap: 1rem; align-items: center; margin-top: auto; flex-wrap: wrap;">
+                <a href="https://akconstruction123.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
+                  <span>View Live</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="/work/ak-construction" class="project-case-btn interactive-hover">
+                  <span>Case Study &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Smart Mobiles -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">smartmobiles.vercel.app</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/smartmobiles.png" alt="Smart Mobiles bilingual PWA — built by Abdul Ajees M, Safr Labs" loading="lazy" onerror="handleImageError(this, 'SM', ['#4F8EF7', '#10B981'])">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Real Client · Local Business</span>
+              <h3 class="project-name">Smart Mobiles — Bilingual PWA</h3>
+              <p class="project-desc">
+                Progressive Web App for a trusted 16-year-old phone repair business in Muthupet, Tamil Nadu. Bilingual Tamil/English, auto-updating business hours and location, PWA-enabled. Two verified Google reviews from the client within weeks of launch.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">PWA</span>
+                <span class="project-tag">Bilingual</span>
+                <span class="project-tag">Local SEO</span>
+              </div>
+              <div class="project-btn-group" style="display: flex; gap: 1rem; align-items: center; margin-top: auto; flex-wrap: wrap;">
+                <a href="https://smartmobiles.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
+                  <span>View Live</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+                <a href="/work/smart-mobiles" class="project-case-btn interactive-hover">
+                  <span>Case Study &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Phoenix Photography -->
+          <article class="project-card standard">
+            <div class="browser-chrome">
+              <div class="browser-dots">
+                <span class="browser-dot red"></span>
+                <span class="browser-dot yellow"></span>
+                <span class="browser-dot green"></span>
+              </div>
+              <div class="browser-address">phoenix-photography.vercel.app</div>
+            </div>
+            
+            <div class="project-visual">
+              <img src="assets/images/phoenixphotography.png" alt="Phoenix Photography Studio website — concept project by Abdul Ajees M" loading="lazy" onerror="handleImageError(this, 'PP', ['#7A7970', '#0D0D0B'])">
+            </div>
+            
+            <div class="project-info">
+              <span class="project-badge">Concept — Photography Studio</span>
+              <h3 class="project-name">Phoenix Photography</h3>
+              <p class="project-desc">
+                Premium photography portfolio concept featuring a custom lightbox gallery, interactive before/after editing slider, and advanced JSON-LD structured schema for image search indexing.
+              </p>
+              <div class="project-tags">
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">Custom Lightbox</span>
+                <span class="project-tag">Before/After</span>
+                <span class="project-tag">JSON-LD</span>
+              </div>
+              <a href="https://phoenix-photography.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
                 <span>View Live</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -3231,7 +3575,7 @@
             </div>
           </article>
 
-          <!-- Project 4: Brew & Flour Café -->
+          <!-- Project 5: Brew & Flour -->
           <article class="project-card standard">
             <div class="browser-chrome">
               <div class="browser-dots">
@@ -3243,21 +3587,22 @@
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/brewandflour.png" alt="Brew & Flour Café Cover" onerror="handleImageError(this, 'BF', ['#7A7970', '#ECEAE4'])">
+              <img src="assets/images/brewandflour.png" alt="Brew and Flour café website — concept project by Abdul Ajees M" loading="lazy" onerror="handleImageError(this, 'BF', ['#7A7970', '#ECEAE4'])">
             </div>
             
             <div class="project-info">
-              <span class="project-badge">Portfolio Piece</span>
+              <span class="project-badge">Concept — Café</span>
               <h3 class="project-name">Brew & Flour Café</h3>
               <p class="project-desc">
-                Full-featured café website for a Coimbatore specialty coffee brand. Includes menu, gallery, table reservations, online ordering, blog, and location integration. Clean editorial design with warm brand aesthetics.
+                Multi-page specialty café website with elegant editorial design. Fully functional custom reservation system, digital menu navigation, and interactive table booking system.
               </p>
               <div class="project-tags">
                 <span class="project-tag">HTML/CSS/JS</span>
                 <span class="project-tag">Multi-page</span>
-                <span class="project-tag">UI Design</span>
+                <span class="project-tag">Reservations</span>
+                <span class="project-tag">Ordering</span>
               </div>
-              <a href="https://brewandflour.vercel.app/" target="_blank" class="project-link-btn interactive-hover">
+              <a href="https://brewandflour.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
                 <span>View Live</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -3267,7 +3612,7 @@
             </div>
           </article>
 
-          <!-- Project 5: EcoRoute -->
+          <!-- Project 6: Zayd Architects -->
           <article class="project-card standard">
             <div class="browser-chrome">
               <div class="browser-dots">
@@ -3275,26 +3620,25 @@
                 <span class="browser-dot yellow"></span>
                 <span class="browser-dot green"></span>
               </div>
-              <div class="browser-address">EcoRoute — AI Route Planner</div>
+              <div class="browser-address">zayd-architects.vercel.app</div>
             </div>
             
             <div class="project-visual">
-              <img src="assets/images/ecoroute.png" alt="EcoRoute Cover" onerror="handleImageError(this, 'ER', ['#10B981', '#4F8EF7'])">
+              <img src="assets/images/zaydarchitects.png" alt="Zayd Architects website — concept project by Abdul Ajees M" loading="lazy" onerror="handleImageError(this, 'ZA', ['#0D0D0B', '#3A3935'])">
             </div>
             
             <div class="project-info">
-              <span class="project-badge">AI Project — Zoho Recognised</span>
-              <h3 class="project-name">EcoRoute</h3>
+              <span class="project-badge">Concept · Architecture Studio</span>
+              <h3 class="project-name">Zayd Architects</h3>
               <p class="project-desc">
-                AI-powered route planning application that compares multiple travel paths based on real-time CO₂ emission data, helping users make environmentally conscious travel decisions. Presented at Zoho Corporation's Rural Tech Uplift 2025.
+                Concept project for a premium architecture studio. Editorial layout, custom typography system, mobile-first responsive grid, and performance-optimised image delivery.
               </p>
               <div class="project-tags">
-                <span class="project-tag">Artificial Intelligence</span>
-                <span class="project-tag">Route Planning</span>
-                <span class="project-tag">CO₂ Data</span>
-                <span class="project-tag">Zoho</span>
+                <span class="project-tag">HTML/CSS/JS</span>
+                <span class="project-tag">Editorial Design</span>
+                <span class="project-tag">Architecture</span>
               </div>
-              <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="project-link-btn interactive-hover">
+              <a href="https://zayd-architects.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
                 <span>View Live</span>
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="7" y1="17" x2="17" y2="7"></line>
@@ -3322,6 +3666,71 @@
         </div>
         <div class="scroll-indicator-bar">
           <div class="scroll-progress-fill" id="scrollProgress"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8.5: CLIENT TESTIMONIALS (DARK EDITORIAL)
+         ========================================== -->
+    <section id="testimonials" class="testimonials-section reveal">
+      <div class="container">
+        <div>
+          <span class="section-label" style="color: var(--blue);">Client Feedback</span>
+          <h2 class="section-title" style="color: white;">What <em>Clients Say</em></h2>
+          <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.7); max-width: 600px;">
+            Hear from real business owners in Tamil Nadu about their experience working with Safr Labs.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-text">
+              <i>"The website looks modern and well organised. Our customers can easily see the services we offer, our working hours, and our location without any confusion. The information is presented clearly, and the automatic updates for timings and location are very useful. We appreciate the attention to detail and the professional work done."</i>
+            </p>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="author-details">
+                <span class="author-name"><b>Mujbur Rahmman</b></span>
+                <span class="author-role">Owner, Smart Mobiles — Muthupet</span>
+                <div class="testimonial-meta-line" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                  <span class="stars" style="color: #FFB300;">★★★★★</span>
+                  <span class="testimonial-badge" style="margin-top: 0; color: #4F8EF7;">Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-text">
+              <i>"We are very happy with our new website. The design is clean, professional, and easy for customers to use. It clearly explains our services, business hours, and contact details. The website stays updated with our timings and location, making it easier for customers to find us. Thank you for creating a website that represents our business well."</i>
+            </p>
+            <div class="testimonial-divider"></div>
+            <div class="testimonial-author">
+              <div class="author-details">
+                <span class="author-name"><b>Nazar Hussain</b></span>
+                <span class="author-role">Owner, Smart Mobiles — Muthupet</span>
+                <div class="testimonial-meta-line" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem;">
+                  <span class="stars" style="color: #FFB300;">★★★★★</span>
+                  <span class="testimonial-badge" style="margin-top: 0; color: #4F8EF7;">Google Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="https://maps.app.goo.gl/H1Geo46JMbbwKcuM8" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover" style="color: var(--blue) !important;">
+            <span>View on Google</span>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--blue);">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -3426,9 +3835,9 @@
                 <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a7 7 0 0 0-7 7c0 2.98 1.86 5.51 4.47 6.47a2 2 0 0 0 2.53-1.92V2z"/>
               </svg>
             </div>
-            <h3 class="ach-title">Participant — Rural Tech Uplift 2025</h3>
+            <h3 class="ach-title">Rural Tech Uplift 2025</h3>
             <p class="ach-desc">
-              Presented EcoRoute at Zoho Corporation, Surandai, Oct 2025. Built an AI-powered eco-friendly route planner and demonstrated it at a corporate tech event.
+              Presented EcoRoute — an AI-powered eco-friendly route planner — at Zoho Corporation's Rural Tech Uplift 2025, Surandai.
             </p>
             <div class="ach-number">01</div>
           </div>
@@ -3461,13 +3870,60 @@
             </div>
             <h3 class="ach-title">Founded Safr Labs</h3>
             <p class="ach-desc">
-              Launched a live digital marketing agency with real paying clients in May 2026 while completing final year of B.Tech IT — turning entrepreneurial vision into reality.
+              Founded Safr Labs — a live premium website design studio — while completing final year B.Tech IT. Two clients delivered. Six projects in portfolio.
             </p>
             <div class="ach-number">03</div>
           </div>
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9.5: FAQ (COMMON QUESTIONS)
+         ========================================== -->
+    <section id="faq" class="faq-section reveal">
+      <div class="container">
+        <span class="section-label" style="color: var(--blue);">FAQ</span>
+        <h2 class="section-title" style="color: white;">Common <em>Questions</em></h2>
+        
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary class="interactive-hover">Who is Abdul Ajees M?</summary>
+            <div class="faq-answer">
+              Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs, a premium website design studio. He is a final-year B.Tech IT student at K. Ramakrishnan College of Engineering and available for freelance web development and full-time developer roles.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="interactive-hover">What kind of websites does Abdul build?</summary>
+            <div class="faq-answer">
+              Abdul builds production websites using HTML, CSS, JavaScript, React, and Next.js. Specialising in fast, mobile-first websites for businesses in Tamil Nadu — corporate portfolios, bilingual PWAs, photography studios, cafés, and architecture firms.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="interactive-hover">Is Abdul Ajees M available for hire?</summary>
+            <div class="faq-answer">
+              Yes. Abdul is available for full-time developer roles and freelance web development projects. Contact via hello@safrlabs.in or WhatsApp +91 84896 77139.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="interactive-hover">What is Safr Labs?</summary>
+            <div class="faq-answer">
+              Safr Labs is a premium website design studio founded by Abdul Ajees M in May 2026, based in Tamil Nadu. It builds custom websites for businesses starting from Rs.7,000. Halal-first — declines projects involving alcohol, gambling, or adult content.
+            </div>
+          </details>
+          
+          <details class="faq-item">
+            <summary class="interactive-hover">What has Abdul Ajees M built?</summary>
+            <div class="faq-answer">
+              Six projects — two real client projects (AK Construction and Smart Mobiles) and four concept builds (Safr Labs agency site, Phoenix Photography Studio, Brew and Flour Café, Zayd Architects). All projects are live and accessible.
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -3488,7 +3944,7 @@
             <div class="contact-links">
               
               <!-- Email -->
-              <a href="mailto:abdajees01@gmail.com" class="contact-card interactive-hover">
+              <a href="mailto:hello@safrlabs.in" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -3497,15 +3953,15 @@
                 </div>
                 <div class="contact-card-info">
                   <span class="contact-card-label">Email Me</span>
-                  <span class="contact-card-value">abdajees01@gmail.com</span>
+                  <span class="contact-card-value">hello@safrlabs.in</span>
                 </div>
               </a>
               
               <!-- GitHub -->
-              <a href="https://github.com/abd-0412" target="_blank" class="contact-card interactive-hover">
+              <a href="https://github.com/abd-0412" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37(3.37) 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                   </svg>
                 </div>
                 <div class="contact-card-info">
@@ -3515,7 +3971,7 @@
               </a>
 
               <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="contact-card interactive-hover">
+              <a href="https://linkedin.com/in/abdul-ajees-m" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -3530,7 +3986,7 @@
               </a>
 
               <!-- Instagram -->
-              <a href="https://www.instagram.com/_abdazee_/" target="_blank" class="contact-card interactive-hover">
+              <a href="https://instagram.com/_abdazee_" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -3555,11 +4011,11 @@
                 I'm available for freelance web development, digital marketing projects, and full-time roles. Let's have a quick chat and figure out how I can help.
               </p>
               
-              <a href="mailto:abdajees01@gmail.com" class="btn interactive-hover">Send Me a Message</a>
+              <a href="mailto:hello@safrlabs.in" class="btn interactive-hover">Send Me a Message</a>
               
               <div class="agency-ad-divider"></div>
               
-              <a href="https://www.safrlabs.in" target="_blank" class="agency-link interactive-hover">
+              <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="agency-link interactive-hover">
                 <span>Also check out my agency → safrlabs.in</span>
               </a>
             </div>
@@ -3579,9 +4035,9 @@
       <div class="footer-row">
         <div>Designed & built by Abdul Ajees M © 2026</div>
         <div class="footer-right">
-          <a href="https://github.com/abd-0412" target="_blank" class="footer-link interactive-hover">GitHub</a>
-          <a href="https://www.linkedin.com/in/abdul-ajees-m/" target="_blank" class="footer-link interactive-hover">LinkedIn</a>
-          <a href="https://www.safrlabs.in" target="_blank" class="footer-link interactive-hover">Safr Labs</a>
+          <a href="https://github.com/abd-0412" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">GitHub</a>
+          <a href="https://linkedin.com/in/abdul-ajees-m" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">LinkedIn</a>
+          <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="footer-link interactive-hover">Safr Labs</a>
         </div>
       </div>
       <div class="footer-subline" style="text-align: center; margin-top: 1.5rem; font-size: 0.7rem; color: rgba(255,255,255,0.15); font-family: var(--font-mono);">
@@ -3589,6 +4045,29 @@
       </div>
     </div>
   </footer>
+
+  <!-- Sticky CTA Bar -->
+  <div id="sticky-cta-bar">
+    <div class="sticky-cta-left">
+      <span class="pulsing-dot" style="background: #10B981;"></span>
+      <span>Available for freelance & full-time roles</span>
+    </div>
+    <div class="sticky-cta-right">
+      <a href="https://wa.me/918489677139?text=Hi%20Abdul%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="sticky-cta-btn sticky-cta-whatsapp interactive-hover">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 0.25rem;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.385 5.39 0 12.007 0c3.202.001 6.212 1.248 8.477 3.517 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.618-5.39 12.003-12.007 12.003-.101 0-.201-.004-.3-.011-2.097-.07-4.147-.618-5.959-1.66L0 24zm6.59-4.862c1.63.967 3.223 1.462 4.876 1.465 5.491 0 9.957-4.468 9.96-9.96.002-2.659-1.031-5.16-2.91-7.04C16.645 1.76 14.15 .727 11.49 .725 6 0 1.54 4.465 1.537 9.957c-.001 1.714.453 3.39 1.317 4.877L1.87 21.03l6.398-1.678c-1.62.966-3.21 1.466-4.878 1.466zM17.478 14.3c-.3-.15-1.782-.88-2.062-.982-.28-.101-.484-.15-.688.15-.204.301-.79.982-.969 1.185-.18.203-.359.227-.659.077-.3-.15-1.267-.467-2.414-1.485-.893-.797-1.496-1.783-1.672-2.083-.176-.3-.019-.462.13-.61.135-.133.301-.35.451-.524.15-.174.2-.3.3-.499.1-.2.05-.376-.025-.526-.075-.15-.688-1.66-.943-2.277-.249-.601-.5-.519-.689-.529-.178-.008-.383-.01-.588-.01-.205 0-.539.077-.82.383-.281.307-1.074 1.05-1.074 2.561s1.1 2.969 1.25 3.17c.15.201 2.164 3.305 5.242 4.636.732.316 1.302.505 1.748.647.737.234 1.409.201 1.94.121.59-.09 1.782-.729 2.032-1.431.25-.701.25-1.3.175-1.43-.075-.13-.279-.28-.579-.43z"/></svg>
+        <span>WhatsApp Me</span>
+      </a>
+      <a href="mailto:hello@safrlabs.in" class="sticky-cta-btn sticky-cta-email interactive-hover">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>Email Me</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/918489677139?text=Hi%20Abdul%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" id="whatsapp-floating" class="whatsapp-pulse interactive-hover">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.385 5.39 0 12.007 0c3.202.001 6.212 1.248 8.477 3.517 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.618-5.39 12.003-12.007 12.003-.101 0-.201-.004-.3-.011-2.097-.07-4.147-.618-5.959-1.66L0 24zm6.59-4.862c1.63.967 3.223 1.462 4.876 1.465 5.491 0 9.957-4.468 9.96-9.96.002-2.659-1.031-5.16-2.91-7.04C16.645 1.76 14.15 .727 11.49 .725 6 0 1.54 4.465 1.537 9.957c-.001 1.714.453 3.39 1.317 4.877L1.87 21.03l6.398-1.678c-1.62.966-3.21 1.466-4.878 1.466zM17.478 14.3c-.3-.15-1.782-.88-2.062-.982-.28-.101-.484-.15-.688.15-.204.301-.79.982-.969 1.185-.18.203-.359.227-.659.077-.3-.15-1.267-.467-2.414-1.485-.893-.797-1.496-1.783-1.672-2.083-.176-.3-.019-.462.13-.61.135-.133.301-.35.451-.524.15-.174.2-.3.3-.499.1-.2.05-.376-.025-.526-.075-.15-.688-1.66-.943-2.277-.249-.601-.5-.519-.689-.529-.178-.008-.383-.01-.588-.01-.205 0-.539.077-.82.383-.281.307-1.074 1.05-1.074 2.561s1.1 2.969 1.25 3.17c.15.201 2.164 3.305 5.242 4.636.732.316 1.302.505 1.748.647.737.234 1.409.201 1.94.121.59-.09 1.782-.729 2.032-1.431.25-.701.25-1.3.175-1.43-.075-.13-.279-.28-.579-.43z"/></svg>
+  </a>
 
   <!-- ==========================================
        16. PORTFOLIO INTERACTION SCRIPTS
@@ -3672,7 +4151,7 @@
     });
 
     // Expand on hoverable elements
-    const hoverTargets = document.querySelectorAll('a, button, .project-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover');
+    const hoverTargets = document.querySelectorAll('a, button, .project-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover, .sticky-cta-btn, #whatsapp-floating');
     hoverTargets.forEach(target => {
       target.addEventListener('mouseenter', () => {
         dot.classList.add('active');
@@ -3700,25 +4179,23 @@
     }
 
     // ==========================================
-    // 5. HERO STAT COUNTERS ANIMATION
+    // 5. HERO STAT COUNTERS ANIMATION (FIXED SMOOTH INTERMEDIATES FOR SMALL INTEGERS)
     // ==========================================
     function animateCounters() {
       const counters = document.querySelectorAll('.stat-number');
       counters.forEach((counter, idx) => {
         const target = +counter.getAttribute('data-count');
         let current = 0;
-        const duration = 1500; // ms
-        const stepTime = 30; // ms
-        const steps = duration / stepTime;
-        const increment = target / steps;
+        const duration = 1200; // Total duration in ms
+        const stepTime = Math.max(30, Math.floor(duration / target)); // Adjust step time so small numbers animate
         
         let timer = setInterval(() => {
-          current += increment;
+          current++;
           if (current >= target) {
             counter.textContent = target + (idx < 2 ? "+" : "");
             clearInterval(timer);
           } else {
-            counter.textContent = Math.floor(current) + (idx < 2 ? "+" : "");
+            counter.textContent = current + (idx < 2 ? "+" : "");
           }
         }, stepTime);
       });
@@ -4048,7 +4525,7 @@
       lastTime = now;
     });
 
-    // TOUCH DRAG LISTENERS (UPGRADE 9)
+    // TOUCH DRAG LISTENERS
     let touchStartX = 0;
     let touchScrollLeft = 0;
 
@@ -4120,6 +4597,121 @@
       }
       animationId = requestAnimationFrame(step);
     }
+
+    // ==========================================
+    // 13. STICKY CTA BAR & FLOATING WHATSAPP LOGIC
+    // ==========================================
+    const heroSectionEl = document.getElementById('hero');
+    const ctaBarEl = document.getElementById('sticky-cta-bar');
+    const waFloatingEl = document.getElementById('whatsapp-floating');
+
+    function updateStickyCTAAndWA() {
+      if (!heroSectionEl) return;
+      const heroHeight = heroSectionEl.offsetHeight;
+      const scrollY = window.scrollY;
+
+      if (scrollY > heroHeight - 100) {
+        if (ctaBarEl) {
+          ctaBarEl.classList.add('visible');
+          const barHeight = ctaBarEl.offsetHeight;
+          document.body.style.paddingBottom = `${barHeight}px`;
+          if (waFloatingEl) {
+            waFloatingEl.style.bottom = `${barHeight + 16}px`;
+          }
+        }
+      } else {
+        if (ctaBarEl) {
+          ctaBarEl.classList.remove('visible');
+          document.body.style.paddingBottom = '0px';
+        }
+        if (waFloatingEl) {
+          waFloatingEl.style.bottom = '2rem';
+        }
+      }
+    }
+
+    window.addEventListener('scroll', updateStickyCTAAndWA);
+    window.addEventListener('resize', updateStickyCTAAndWA);
+    // Trigger on load in case page is already scrolled past hero
+    setTimeout(updateStickyCTAAndWA, 200);
+  </script>
+
+  <!-- SEO Schemas (AEO / GEO Optimization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Ajees M",
+    "alternateName": "Azee Prince",
+    "url": "https://abd-developer.vercel.app",
+    "image": "https://abd-developer.vercel.app/assets/images/azee-professional.jpg",
+    "jobTitle": "Web Developer & Agency Founder",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Safr Labs",
+      "url": "https://safrlabs.in"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Muthupet",
+      "addressRegion": "Tamil Nadu",
+      "addressCountry": "IN"
+    },
+    "email": "hello@safrlabs.in",
+    "sameAs": [
+      "https://github.com/abd-0412",
+      "https://linkedin.com/in/abdul-ajees-m",
+      "https://safrlabs.in",
+      "https://instagram.com/_abdazee_"
+    ],
+    "knowsAbout": ["Web Development", "Next.js", "HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Digital Marketing", "SEO"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "K. Ramakrishnan College of Engineering",
+      "address": "Samayapuram, Tamil Nadu, India"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Abdul Ajees M?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs, a premium website design studio. He is a final year B.Tech IT student at K. Ramakrishnan College of Engineering and available for freelance web development and full-time roles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does Abdul Ajees M build?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Abdul builds production websites using HTML, CSS, JavaScript, React, and Next.js. He has delivered websites for real clients in Tamil Nadu including a construction portfolio and a bilingual PWA for a local business, with measurable business results."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Safr Labs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Safr Labs is a premium website design studio founded by Abdul Ajees M in May 2026, based in Tamil Nadu, India. It builds custom websites for businesses starting from Rs.7,000. It is a halal-first studio that declines projects involving alcohol, gambling, or adult content."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Abdul Ajees M available for freelance work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Abdul Ajees M is available for freelance web development projects and full-time developer roles. Contact him at hello@safrlabs.in."
+        }
+      }
+    ]
+  }
   </script>
 </body>
 </html>
