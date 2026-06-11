@@ -4,7 +4,9 @@
   "description": "Abdul Ajees M - Web Developer & Agency Founder Portfolio",
   "main": "index.html",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "vite": "^5.2.11"
