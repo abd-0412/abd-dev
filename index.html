@@ -7,7 +7,7 @@
   <!-- SEO Meta Tags -->
   <title>Abdul Ajees M — Web Developer & Agency Founder | Tamil Nadu</title>
   <meta name="description" content="Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs. Final year B.Tech IT student delivering production websites for real businesses. Available for freelance and full-time roles.">
-  <meta name="keywords" content="web developer tamil nadu, freelance web developer india, mern stack developer tamil nadu, website design tamil nadu, abdul ajees m, safr labs founder, b.tech it developer, web developer muthupet, next.js developer india">
+  <meta name="keywords" content="web developer tamil nadu, freelance web developer india, website design tamil nadu, abdul ajees m, safr labs founder, b.tech it developer, web developer muthupet, next.js developer india">
   <meta name="author" content="Abdul Ajees M">
   
   <!-- Canonical Link -->
@@ -320,6 +320,8 @@
       font-weight: 900;
       color: var(--indigo);
       letter-spacing: -0.03em;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .nav-links {
@@ -721,8 +723,8 @@
     }
 
     .card-status {
-      top: 2rem;
-      right: -2.5rem;
+      top: -1.5rem;
+      right: -3rem;
       animation: float1 4.5s ease-in-out infinite;
     }
 
@@ -990,10 +992,41 @@
       transform: scale(1);
     }
 
+    /* SVG Icon Bugfixes - Prevent Flexbox Collapsing & Cropping */
+    svg {
+      overflow: visible !important;
+      flex-shrink: 0 !important;
+    }
     .skill-chip svg {
+      width: 16px !important;
+      height: 16px !important;
+      stroke-width: 2 !important;
       color: var(--accent-color, var(--indigo));
       transition: color 0.25s ease;
-      flex-shrink: 0;
+    }
+    .contact-card-icon svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    .cert-icon svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    .ach-icon svg {
+      width: 32px !important;
+      height: 32px !important;
+    }
+    .education-icon svg {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    .education-location svg {
+      width: 14px !important;
+      height: 14px !important;
+    }
+    .skills-category-label svg {
+      width: 20px !important;
+      height: 20px !important;
     }
 
     .skill-chip:hover {
@@ -1280,7 +1313,7 @@
     }
 
     /* ==========================================
-       11. PROJECTS CAROUSEL (DRAG-SCROLL)
+       11. PROJECTS GRID
        ========================================== */
     #projects {
       position: relative;
@@ -1304,50 +1337,27 @@
       pointer-events: none;
     }
 
-    #projects .container,
-    #projects .projects-carousel-wrapper,
-    #projects .carousel-footer {
+    #projects .container {
       position: relative;
       z-index: 2;
     }
 
-    .projects-carousel-wrapper {
-      position: relative;
-      margin-top: 3rem;
-      width: 100vw;
-      left: 50%;
-      transform: translateX(-50%);
-      overflow: hidden;
-      padding-bottom: 1rem;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2.25rem;
+      margin-top: 3.5rem;
+      width: 100%;
     }
 
-    .projects-carousel {
-      display: flex;
-      gap: 2rem;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      padding: 1rem 2rem;
-      scrollbar-width: none;
-    }
-
-    @media (min-width: 1200px) {
-      .projects-carousel {
-        padding-left: calc((100vw - 1200px) / 2 + 2rem);
-        padding-right: calc((100vw - 1200px) / 2 + 2rem);
+    @media (max-width: 480px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
     }
 
-    .projects-carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .projects-carousel.active-dragging {
-      scroll-snap-type: none;
-      cursor: grabbing !important;
-    }
-
     .project-card {
-      scroll-snap-align: start;
       border-radius: 20px;
       border: 1px solid var(--line);
       background: var(--card);
@@ -1355,16 +1365,8 @@
       flex-direction: column;
       overflow: hidden;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
-      flex-shrink: 0;
       position: relative;
-    }
-
-    .project-card.featured {
-      width: 560px;
-    }
-
-    .project-card.standard {
-      width: 420px;
+      width: 100%;
     }
 
     .project-card::after {
@@ -1430,19 +1432,18 @@
     }
 
     .project-visual {
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      display: block;
+      width: 100%;
       position: relative;
+      overflow: hidden;
+      background: var(--bg2);
     }
 
     .project-visual svg,
     .project-visual img {
+      display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -1519,44 +1520,7 @@
       color: var(--blue);
     }
 
-    /* Carousel footer hint */
-    .carousel-footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 2rem;
-    }
-
-    .drag-hint {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--ink3);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .scroll-indicator-bar {
-      width: 120px;
-      height: 2px;
-      background: var(--line);
-      position: relative;
-      border-radius: 2px;
-    }
-
-    .scroll-progress-fill {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 0%;
-      background: var(--indigo);
-      border-radius: 2px;
-      transition: width 0.1s ease-out;
-    }
+    /* Removed projects carousel indicator styles */
 
     /* ==========================================
        11.5 CLIENT TESTIMONIALS (DARK EDITORIAL)
@@ -1839,6 +1803,9 @@
       color: var(--blue);
       display: flex;
       align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
       flex-shrink: 0;
     }
 
@@ -1921,70 +1888,7 @@
       color: var(--blue);
     }
 
-    /* ==========================================
-       13.5 STICKY CTA BAR & FLOATING WHATSAPP
-       ========================================== */
-    #sticky-cta-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: #0D0D0B;
-      color: white;
-      border-top: 2px solid var(--indigo);
-      z-index: 999;
-      padding: 1.25rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transform: translateY(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
-    }
-    #sticky-cta-bar.visible {
-      transform: translateY(0);
-    }
-    .sticky-cta-left {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 0.85);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .sticky-cta-right {
-      display: flex;
-      gap: 1rem;
-    }
-    .sticky-cta-btn {
-      padding: 0.75rem 1.75rem;
-      border-radius: 100px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      transition: var(--transition-fast);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-    .sticky-cta-whatsapp {
-      background: #25D366;
-      color: white;
-    }
-    .sticky-cta-whatsapp:hover {
-      background: #128C7E;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
-    }
-    .sticky-cta-email {
-      background: var(--indigo);
-      color: white;
-    }
-    .sticky-cta-email:hover {
-      background: var(--blue);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px rgba(45, 43, 143, 0.3);
-    }
+
 
     #whatsapp-floating {
       position: fixed;
@@ -2047,27 +1951,7 @@
       opacity: 1;
     }
 
-    @media (max-width: 600px) {
-      #sticky-cta-bar {
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 1rem;
-        text-align: center;
-      }
-      .sticky-cta-left {
-        font-size: 0.88rem;
-        justify-content: center;
-      }
-      .sticky-cta-right {
-        width: 100%;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .sticky-cta-btn {
-        width: 100%;
-        padding: 0.65rem;
-      }
-    }
+
 
     /* ==========================================
        14. FOOTER (FULL DARK CONTINUATION)
@@ -2267,23 +2151,11 @@
         padding: 1.75rem;
       }
       
-      .project-card.featured,
-      .project-card.standard {
-        width: 85vw;
-      }
-
       .project-info {
         padding: 1.5rem;
       }
 
-      .project-visual {
-        height: 180px;
-      }
 
-      .projects-carousel {
-        gap: 1.25rem;
-        padding: 1rem 1.25rem;
-      }
       
       .cert-grid {
         grid-template-columns: 1fr;
@@ -2592,7 +2464,7 @@
     .project-link-btn svg {
       transition: transform 0.25s ease;
       stroke: var(--indigo);
-      stroke-width: 2.5;
+      stroke-width: 2;
     }
     .project-link-btn:hover svg {
       transform: translate(2px, -2px);
@@ -2634,35 +2506,51 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       padding-bottom: 1.25rem;
     }
-    .faq-item[open] summary {
-      color: var(--blue);
-    }
-    .faq-item summary {
+    .faq-question {
       font-family: var(--font-body);
       font-size: 1.15rem;
       font-weight: 700;
       cursor: pointer;
       padding: 0.5rem 0;
-      list-style: none;
-      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       user-select: none;
+      background: none;
+      border: none;
+      color: white;
+      width: 100%;
+      text-align: left;
+      transition: color 0.25s ease;
     }
-    .faq-item summary::-webkit-details-marker {
-      display: none;
+    .faq-question:hover {
+      color: var(--blue);
     }
-    .faq-item summary::after {
+    .faq-item.active .faq-question {
+      color: var(--blue);
+    }
+    .faq-question::after {
       content: '+';
       font-family: var(--font-mono);
       font-size: 1.25rem;
       color: var(--blue);
       transition: transform 0.3s ease;
     }
-    .faq-item[open] summary::after {
+    .faq-item.active .faq-question::after {
       content: '−';
       transform: rotate(180deg);
+    }
+    .faq-answer-wrapper {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      overflow: hidden;
+    }
+    .faq-item.active .faq-answer-wrapper {
+      grid-template-rows: 1fr;
+    }
+    .faq-answer-inner {
+      min-height: 0;
     }
     .faq-answer {
       font-size: 1rem;
@@ -2696,10 +2584,7 @@
           <a href="#about" class="nav-link interactive-hover">About</a>
           <a href="#skills" class="nav-link interactive-hover">Skills</a>
           <a href="#experience" class="nav-link interactive-hover">Experience</a>
-          <a href="#education" class="nav-link interactive-hover">Education</a>
           <a href="#projects" class="nav-link interactive-hover">Projects</a>
-          <a href="#testimonials" class="nav-link interactive-hover">Testimonials</a>
-          <a href="#awards" class="nav-link interactive-hover">Awards</a>
           <a href="#contact" class="nav-link interactive-hover">Contact</a>
         </div>
         <div class="nav-right">
@@ -3131,27 +3016,27 @@
             </h3>
             <div class="skill-chips-container">
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 22l10-4 10 4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h16l-2 17-6 3-6-3L4 2z"/><path d="M16 8H9v3h6.5l-.5 5-3 1-3-1-.2-2"/></svg>
                 <span>HTML5</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h16l-2 17-6 3-6-3L4 2z"/><path d="M8.5 8h7l-3.5 3.5H15l-.5 4.5-2.5.8-2.5-.8-.2-2.5"/></svg>
                 <span>CSS3</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M10 8v5a1.5 1.5 0 0 1-3 0"/><path d="M14 14.5c.3.5.8.8 1.5.8 1 0 1.3-.4 1.3-1s-.3-.7-1.6-1c-1.3-.3-2.2-.7-2.2-1.8s.7-1.5 2-1.5c.8 0 1.4.3 1.8.8"/></svg>
                 <span>JavaScript</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 21c-4.97 0-9-1.79-9-4s4.03-4 9-4 9 1.79 9 4-4.03 4-9 4z"/><path d="M12 13c-4.97 0-9-1.79-9-4s4.03-4 9-4 9 1.79 9 4-4.03 4-9 4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="5" ry="11" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="5" ry="11" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="5" ry="11" transform="rotate(150 12 12)"/><circle cx="12" cy="12" r="1.5"/></svg>
                 <span>React</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M8 16V8l8 8V8"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 16V8l8 8V8"/></svg>
                 <span>Next.js</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="12" height="13" rx="2"/><rect x="14" y="8" width="8" height="11" rx="2"/><path d="M5 20h6"/><path d="M8 16v4"/><path d="M18 16v1"/></svg>
                 <span>Responsive Design</span>
               </span>
             </div>
@@ -3165,23 +3050,23 @@
             </h3>
             <div class="skill-chips-container">
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 3 21 8 21 16 12 21 3 16 3 8"/><path d="M12 8c-2 2-2 5 0 7s5 2 7 0c0-2-2-5-7-7zM12 15V8"/></svg>
                 <span>Node.js</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2" ry="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="2" y1="15" x2="22" y2="15"/><circle cx="6" cy="6" r="1" fill="currentColor"/><circle cx="6" cy="12" r="1" fill="currentColor"/><circle cx="6" cy="18" r="1" fill="currentColor"/><path d="M14 6h4M14 12h4M14 18h4"/></svg>
                 <span>Express.js</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 0-7 4-7 10c0 4.42 3.58 8 8 8s8-3.58 8-8c0-6-7-10-7-10z"/><path d="M12 2v18"/></svg>
                 <span>MongoDB</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                 <span>REST APIs</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><path d="M6 1c0 2-2 2-2 4M10 1c0 2-2 2-2 4M14 1c0 2-2 2-2 4"/></svg>
                 <span>Java</span>
               </span>
             </div>
@@ -3195,27 +3080,27 @@
             </h3>
             <div class="skill-chips-container">
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5a3.5 3.5 0 0 1 3.5-3.5H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 0 1-3.5 3.5c-1.93 0-3.5-1.57-3.5-3.5z"/></svg>
                 <span>Figma</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
                 <span>Git</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
                 <span>GitHub</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="16 18 22 12 16 6 8 12 16 18"/><polygon points="8 18 2 12 8 6 16 12 8 18"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6L6 18l-4-4 4-4 16 12V6z"/><path d="M2 10l16-6 4 4-4 4L2 10z"/></svg>
                 <span>VS Code</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 8l3 8 1-3 1 3 3-8"/></svg>
                 <span>WordPress</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/><circle cx="7.5" cy="10.5" r="1.2" fill="currentColor"/><circle cx="11.5" cy="7.5" r="1.2" fill="currentColor"/><circle cx="16.5" cy="9.5" r="1.2" fill="currentColor"/><circle cx="15.5" cy="14.5" r="1.2" fill="currentColor"/></svg>
                 <span>Canva</span>
               </span>
             </div>
@@ -3229,23 +3114,23 @@
             </h3>
             <div class="skill-chips-container">
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 <span>Social Media Management</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4z"/></svg>
                 <span>Content Creation</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 <span>SEO</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
                 <span>Instagram Marketing</span>
               </span>
               <span class="skill-chip">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 <span>Bilingual Copywriting</span>
               </span>
             </div>
@@ -3402,20 +3287,17 @@
     </section>
 
     <!-- ==========================================
-         SECTION 8: PROJECTS (Horizontal drag-scroll)
+         SECTION 8: PROJECTS
          ========================================== -->
     <section id="projects" class="reveal">
       <div class="container">
         <div>
           <span class="section-label">Projects</span>
           <h2 class="section-title">Things I've <em>Actually Built</em></h2>
-          <p class="section-subtitle">Real projects. Real clients. Real results. Drag to explore.</p>
+          <p class="section-subtitle">Real projects. Real clients. Real results.</p>
         </div>
-      </div>
 
-      <!-- Drag Carousel Outer wrapper -->
-      <div class="projects-carousel-wrapper">
-        <div class="projects-carousel" id="projectsCarousel">
+        <div class="projects-grid">
           
           <!-- Project 1: Safr Labs (FEATURED) -->
           <article class="project-card featured">
@@ -3436,13 +3318,13 @@
               <span class="project-badge">Own Agency</span>
               <h3 class="project-name">Safr Labs — Digital Marketing Studio</h3>
               <p class="project-desc">
-                Founded Safr Labs — a live premium website design studio and digital agency. Halal-first and high-performance, built with Next.js and achieving Lighthouse 100 scores.
+                Founded Safr Labs — a live premium website design studio and digital agency. Halal-first and high-performance, built with Next.js and achieving best lightscores.
               </p>
               <div class="project-tags">
                 <span class="project-tag">Next.js</span>
                 <span class="project-tag">SEO</span>
                 <span class="project-tag">Halal-first</span>
-                <span class="project-tag">Lighthouse 100</span>
+                <span class="project-tag">best lightscore</span>
               </div>
               <a href="https://safrlabs.in" target="_blank" rel="noopener noreferrer" class="project-link-btn interactive-hover">
                 <span>Visit Agency</span>
@@ -3650,24 +3532,6 @@
 
         </div>
       </div>
-
-      <!-- Drag Carousel Indicator Bar -->
-      <div class="carousel-footer">
-        <div class="drag-hint">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="9" y1="18" x2="15" y2="12"></line>
-            <line x1="9" y1="6" x2="15" y2="12"></line>
-          </svg>
-          <span>Drag to explore</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="15" y1="18" x2="9" y2="12"></line>
-            <line x1="15" y1="6" x2="9" y2="12"></line>
-          </svg>
-        </div>
-        <div class="scroll-indicator-bar">
-          <div class="scroll-progress-fill" id="scrollProgress"></div>
-        </div>
-      </div>
     </section>
 
     <!-- ==========================================
@@ -3767,10 +3631,8 @@
           <div class="cert-card reveal-left delay-2">
             <div class="cert-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="6" y1="3" x2="6" y2="15"></line>
-                <circle cx="18" cy="6" r="3"></circle>
-                <circle cx="6" cy="18" r="3"></circle>
-                <path d="M18 9a9 9 0 0 1-9 9"></path>
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                <path d="M9 18c-4.51 2-5-2-7-2"/>
               </svg>
             </div>
             <h3 class="cert-name">GitHub Basics</h3>
@@ -3799,7 +3661,11 @@
           <div class="cert-card reveal-left delay-4">
             <div class="cert-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm0-16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2.5 5.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                <path d="M12 22C17.52 22 22 17.52 22 12S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/>
+                <circle cx="7.5" cy="10.5" r="1.2" fill="currentColor"/>
+                <circle cx="11.5" cy="7.5" r="1.2" fill="currentColor"/>
+                <circle cx="16.5" cy="9.5" r="1.2" fill="currentColor"/>
+                <circle cx="15.5" cy="14.5" r="1.2" fill="currentColor"/>
               </svg>
             </div>
             <h3 class="cert-name">Introduction to CSS</h3>
@@ -3813,7 +3679,9 @@
           <div class="cert-card reveal-left delay-5">
             <div class="cert-icon">
               <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <path d="M10 8v5a1.5 1.5 0 0 1-3 0"/>
+                <path d="M14 14.5c.3.5.8.8 1.5.8 1 0 1.3-.4 1.3-1s-.3-.7-1.6-1c-1.3-.3-2.2-.7-2.2-1.8s.7-1.5 2-1.5c.8 0 1.4.3 1.8.8"/>
               </svg>
             </div>
             <h3 class="cert-name">JavaScript for Beginners</h3>
@@ -3832,7 +3700,11 @@
           <div class="ach-card reveal delay-1">
             <div class="ach-icon">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34M12 2a7 7 0 0 0-7 7c0 2.98 1.86 5.51 4.47 6.47a2 2 0 0 0 2.53-1.92V2z"/>
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                <path d="M4 22h16"></path>
+                <path d="M10 14.66V17c0 .55-.45 1-1 1H4v2h16v-2h-5c-.55 0-1-.45-1-1v-2.34"></path>
+                <path d="M12 2a7 7 0 0 0-7 7c0 2.98 1.86 5.51 4.47 6.47a2 2 0 0 0 2.53-1.92V2"></path>
               </svg>
             </div>
             <h3 class="ach-title">Rural Tech Uplift 2025</h3>
@@ -3889,40 +3761,60 @@
         <h2 class="section-title" style="color: white;">Common <em>Questions</em></h2>
         
         <div class="faq-list">
-          <details class="faq-item">
-            <summary class="interactive-hover">Who is Abdul Ajees M?</summary>
-            <div class="faq-answer">
-              Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs, a premium website design studio. He is a final-year B.Tech IT student at K. Ramakrishnan College of Engineering and available for freelance web development and full-time developer roles.
+          <div class="faq-item">
+            <button class="faq-question interactive-hover">Who is Abdul Ajees M?</button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Abdul Ajees M is a Tamil Nadu-based web developer and founder of Safr Labs, a premium website design studio. He is a final-year B.Tech IT student at K. Ramakrishnan College of Engineering and available for freelance web development and full-time developer roles.
+                </div>
+              </div>
             </div>
-          </details>
+          </div>
           
-          <details class="faq-item">
-            <summary class="interactive-hover">What kind of websites does Abdul build?</summary>
-            <div class="faq-answer">
-              Abdul builds production websites using HTML, CSS, JavaScript, React, and Next.js. Specialising in fast, mobile-first websites for businesses in Tamil Nadu — corporate portfolios, bilingual PWAs, photography studios, cafés, and architecture firms.
+          <div class="faq-item">
+            <button class="faq-question interactive-hover">What kind of websites does Abdul build?</button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Abdul builds production websites using HTML, CSS, JavaScript, React, and Next.js. Specialising in fast, mobile-first websites for businesses in Tamil Nadu — corporate portfolios, bilingual PWAs, photography studios, cafés, and architecture firms.
+                </div>
+              </div>
             </div>
-          </details>
+          </div>
           
-          <details class="faq-item">
-            <summary class="interactive-hover">Is Abdul Ajees M available for hire?</summary>
-            <div class="faq-answer">
-              Yes. Abdul is available for full-time developer roles and freelance web development projects. Contact via hello@safrlabs.in or WhatsApp +91 84896 77139.
+          <div class="faq-item">
+            <button class="faq-question interactive-hover">Is Abdul Ajees M available for hire?</button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Yes. Abdul is available for full-time developer roles and freelance web development projects. Contact via hello@safrlabs.in or WhatsApp +91 84896 77139.
+                </div>
+              </div>
             </div>
-          </details>
+          </div>
           
-          <details class="faq-item">
-            <summary class="interactive-hover">What is Safr Labs?</summary>
-            <div class="faq-answer">
-              Safr Labs is a premium website design studio founded by Abdul Ajees M in May 2026, based in Tamil Nadu. It builds custom websites for businesses starting from Rs.7,000. Halal-first — declines projects involving alcohol, gambling, or adult content.
+          <div class="faq-item">
+            <button class="faq-question interactive-hover">What is Safr Labs?</button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Safr Labs is a premium website design studio founded by Abdul Ajees M in May 2026, based in Tamil Nadu. It builds custom websites for businesses starting from Rs.7,000. Halal-first — declines projects involving alcohol, gambling, or adult content.
+                </div>
+              </div>
             </div>
-          </details>
+          </div>
           
-          <details class="faq-item">
-            <summary class="interactive-hover">What has Abdul Ajees M built?</summary>
-            <div class="faq-answer">
-              Six projects — two real client projects (AK Construction and Smart Mobiles) and four concept builds (Safr Labs agency site, Phoenix Photography Studio, Brew and Flour Café, Zayd Architects). All projects are live and accessible.
+          <div class="faq-item">
+            <button class="faq-question interactive-hover">What has Abdul Ajees M built?</button>
+            <div class="faq-answer-wrapper">
+              <div class="faq-answer-inner">
+                <div class="faq-answer">
+                  Six projects — two real client projects (AK Construction and Smart Mobiles) and four concept builds (Safr Labs agency site, Phoenix Photography Studio, Brew and Flour Café, Zayd Architects). All projects are live and accessible.
+                </div>
+              </div>
             </div>
-          </details>
+          </div>
         </div>
       </div>
     </section>
@@ -3946,7 +3838,7 @@
               <!-- Email -->
               <a href="mailto:hello@safrlabs.in" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                     <polyline points="22,6 12,13 2,6"/>
                   </svg>
@@ -3960,8 +3852,9 @@
               <!-- GitHub -->
               <a href="https://github.com/abd-0412" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37(3.37) 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                    <path d="M9 18c-4.51 2-5-2-7-2"/>
                   </svg>
                 </div>
                 <div class="contact-card-info">
@@ -3973,7 +3866,7 @@
               <!-- LinkedIn -->
               <a href="https://linkedin.com/in/abdul-ajees-m" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                     <rect x="2" y="9" width="4" height="12"/>
                     <circle cx="4" cy="4" r="2"/>
@@ -3988,7 +3881,7 @@
               <!-- Instagram -->
               <a href="https://instagram.com/_abdazee_" target="_blank" rel="noopener noreferrer" class="contact-card interactive-hover">
                 <div class="contact-card-icon">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
@@ -4046,23 +3939,7 @@
     </div>
   </footer>
 
-  <!-- Sticky CTA Bar -->
-  <div id="sticky-cta-bar">
-    <div class="sticky-cta-left">
-      <span class="pulsing-dot" style="background: #10B981;"></span>
-      <span>Available for freelance & full-time roles</span>
-    </div>
-    <div class="sticky-cta-right">
-      <a href="https://wa.me/918489677139?text=Hi%20Abdul%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="sticky-cta-btn sticky-cta-whatsapp interactive-hover">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right: 0.25rem;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.003 5.385 5.39 0 12.007 0c3.202.001 6.212 1.248 8.477 3.517 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.618-5.39 12.003-12.007 12.003-.101 0-.201-.004-.3-.011-2.097-.07-4.147-.618-5.959-1.66L0 24zm6.59-4.862c1.63.967 3.223 1.462 4.876 1.465 5.491 0 9.957-4.468 9.96-9.96.002-2.659-1.031-5.16-2.91-7.04C16.645 1.76 14.15 .727 11.49 .725 6 0 1.54 4.465 1.537 9.957c-.001 1.714.453 3.39 1.317 4.877L1.87 21.03l6.398-1.678c-1.62.966-3.21 1.466-4.878 1.466zM17.478 14.3c-.3-.15-1.782-.88-2.062-.982-.28-.101-.484-.15-.688.15-.204.301-.79.982-.969 1.185-.18.203-.359.227-.659.077-.3-.15-1.267-.467-2.414-1.485-.893-.797-1.496-1.783-1.672-2.083-.176-.3-.019-.462.13-.61.135-.133.301-.35.451-.524.15-.174.2-.3.3-.499.1-.2.05-.376-.025-.526-.075-.15-.688-1.66-.943-2.277-.249-.601-.5-.519-.689-.529-.178-.008-.383-.01-.588-.01-.205 0-.539.077-.82.383-.281.307-1.074 1.05-1.074 2.561s1.1 2.969 1.25 3.17c.15.201 2.164 3.305 5.242 4.636.732.316 1.302.505 1.748.647.737.234 1.409.201 1.94.121.59-.09 1.782-.729 2.032-1.431.25-.701.25-1.3.175-1.43-.075-.13-.279-.28-.579-.43z"/></svg>
-        <span>WhatsApp Me</span>
-      </a>
-      <a href="mailto:hello@safrlabs.in" class="sticky-cta-btn sticky-cta-email interactive-hover">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.25rem;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        <span>Email Me</span>
-      </a>
-    </div>
-  </div>
+
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/918489677139?text=Hi%20Abdul%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" id="whatsapp-floating" class="whatsapp-pulse interactive-hover">
@@ -4151,7 +4028,7 @@
     });
 
     // Expand on hoverable elements
-    const hoverTargets = document.querySelectorAll('a, button, .project-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover, .sticky-cta-btn, #whatsapp-floating');
+    const hoverTargets = document.querySelectorAll('a, button, .project-card, .cert-card, .ach-card, .timeline-content, .education-card, .skill-chip, .interactive-hover, #whatsapp-floating');
     hoverTargets.forEach(target => {
       target.addEventListener('mouseenter', () => {
         dot.classList.add('active');
@@ -4448,192 +4325,31 @@
     window.addEventListener('resize', updateTimelineProgress);
     setTimeout(updateTimelineProgress, 100);
 
+    // Removed projects carousel drag & touch scroll logic
+
     // ==========================================
-    // 12. PROJECTS CAROUSEL DRAG & TOUCH SCROLL
+    // 12. FAQ ACCORDION LOGIC
     // ==========================================
-    const carousel = document.getElementById('projectsCarousel');
-    const scrollProgress = document.getElementById('scrollProgress');
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    let velocity = 0;
-    let lastX = 0;
-    let lastTime = 0;
-    let animationId = null;
-    let isDraggingMovement = false;
-
-    // Track scroll events for progress bar
-    carousel.addEventListener('scroll', updateCarouselProgressBar);
-
-    function updateCarouselProgressBar() {
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      if (maxScroll <= 0) return;
-      const scrollPercent = (carousel.scrollLeft / maxScroll) * 100;
-      scrollProgress.style.width = `${scrollPercent}%`;
-    }
-    updateCarouselProgressBar();
-
-    // MOUSE DRAG LISTENERS
-    carousel.addEventListener('mousedown', (e) => {
-      isDown = true;
-      isDraggingMovement = false;
-      carousel.classList.add('active-dragging');
-      startX = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-      
-      cancelAnimationFrame(animationId);
-      velocity = 0;
-      lastX = e.pageX;
-      lastTime = performance.now();
-    });
-
-    carousel.addEventListener('mouseleave', () => {
-      if (isDown) {
-        isDown = false;
-        carousel.classList.remove('active-dragging');
-        applyInertia();
-      }
-    });
-
-    carousel.addEventListener('mouseup', () => {
-      isDown = false;
-      carousel.classList.remove('active-dragging');
-      applyInertia();
-    });
-
-    carousel.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      
-      const x = e.pageX - carousel.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      
-      if (Math.abs(x - lastX) > 2) {
-        isDraggingMovement = true;
-      }
-      
-      carousel.scrollLeft = scrollLeft - walk;
-
-      const now = performance.now();
-      const dt = now - lastTime;
-      if (dt > 0) {
-        const dx = e.pageX - lastX;
-        velocity = dx / dt;
-      }
-      lastX = e.pageX;
-      lastTime = now;
-    });
-
-    // TOUCH DRAG LISTENERS
-    let touchStartX = 0;
-    let touchScrollLeft = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-      isDown = true;
-      isDraggingMovement = false;
-      touchStartX = e.touches[0].clientX;
-      touchScrollLeft = carousel.scrollLeft;
-      carousel.classList.add('active-dragging');
-      
-      cancelAnimationFrame(animationId);
-      velocity = 0;
-      lastX = e.touches[0].clientX;
-      lastTime = performance.now();
-    }, { passive: true });
-
-    carousel.addEventListener('touchmove', (e) => {
-      if (!isDown) return;
-      const touchX = e.touches[0].clientX;
-      const deltaX = touchX - touchStartX;
-      carousel.scrollLeft = touchScrollLeft - deltaX;
-
-      if (Math.abs(touchX - lastX) > 2) {
-        isDraggingMovement = true;
-      }
-
-      const now = performance.now();
-      const dt = now - lastTime;
-      if (dt > 0) {
-        const dx = touchX - lastX;
-        velocity = dx / dt;
-      }
-      lastX = touchX;
-      lastTime = now;
-
-      // Prevent vertical page scroll only when actively dragging horizontally
-      if (Math.abs(deltaX) > 8) {
-        if (e.cancelable) e.preventDefault();
-      }
-    }, { passive: false });
-
-    carousel.addEventListener('touchend', () => {
-      isDown = false;
-      carousel.classList.remove('active-dragging');
-      applyInertia();
-    });
-
-    // Prevent navigation clicks when dragging
-    carousel.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', (e) => {
-        if (isDraggingMovement) {
-          e.preventDefault();
+    document.querySelectorAll('.faq-question').forEach(questionBtn => {
+      questionBtn.addEventListener('click', () => {
+        const item = questionBtn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle the clicked one
+        if (isActive) {
+          item.classList.remove('active');
+        } else {
+          item.classList.add('active');
         }
       });
     });
-
-    // Inertia Glide animation
-    function applyInertia() {
-      if (Math.abs(velocity) < 0.1) return;
-      const friction = 0.94;
-      function step() {
-        if (isDown) return;
-        carousel.scrollLeft -= velocity * 16;
-        velocity *= friction;
-        
-        if (Math.abs(velocity) > 0.05) {
-          animationId = requestAnimationFrame(step);
-        }
-      }
-      animationId = requestAnimationFrame(step);
-    }
-
-    // ==========================================
-    // 13. STICKY CTA BAR & FLOATING WHATSAPP LOGIC
-    // ==========================================
-    const heroSectionEl = document.getElementById('hero');
-    const ctaBarEl = document.getElementById('sticky-cta-bar');
-    const waFloatingEl = document.getElementById('whatsapp-floating');
-
-    function updateStickyCTAAndWA() {
-      if (!heroSectionEl) return;
-      const heroHeight = heroSectionEl.offsetHeight;
-      const scrollY = window.scrollY;
-
-      if (scrollY > heroHeight - 100) {
-        if (ctaBarEl) {
-          ctaBarEl.classList.add('visible');
-          const barHeight = ctaBarEl.offsetHeight;
-          document.body.style.paddingBottom = `${barHeight}px`;
-          if (waFloatingEl) {
-            waFloatingEl.style.bottom = `${barHeight + 16}px`;
-          }
-        }
-      } else {
-        if (ctaBarEl) {
-          ctaBarEl.classList.remove('visible');
-          document.body.style.paddingBottom = '0px';
-        }
-        if (waFloatingEl) {
-          waFloatingEl.style.bottom = '2rem';
-        }
-      }
-    }
-
-    window.addEventListener('scroll', updateStickyCTAAndWA);
-    window.addEventListener('resize', updateStickyCTAAndWA);
-    // Trigger on load in case page is already scrolled past hero
-    setTimeout(updateStickyCTAAndWA, 200);
   </script>
 
   <!-- SEO Schemas (AEO / GEO Optimization) -->
